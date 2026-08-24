@@ -1543,7 +1543,6 @@ textarea:focus-visible {
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem var(--gutter);
-   margin: 50px;
 }
 
 /* inner wrapper clips to rounded card */
