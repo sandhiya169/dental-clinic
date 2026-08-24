@@ -138,6 +138,14 @@ textarea:focus-visible {
   border-radius: 4px;
 }
 
+/* Custom form validation error */
+.form-error {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
 /* subtle grain overlay for warmth */
 .grain-overlay {
   position: fixed;
@@ -146,8 +154,7 @@ textarea:focus-visible {
   z-index: 9999;
   opacity: 0.035;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+} 
 
 /* custom cursor dot (desktop only, added via JS) */
 .cursor-dot {

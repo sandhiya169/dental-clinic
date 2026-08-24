@@ -468,7 +468,25 @@ function initInteractions() {
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
+      
+      form.querySelectorAll('.form-error').forEach(el => el.remove());
+      
+      if (!form.checkValidity()) { 
+          Array.from(form.elements).forEach(input => {
+              if (input.willValidate && !input.validity.valid) {
+                  const err = document.createElement('span');
+                  err.className = 'form-error';
+                  err.textContent = input.validationMessage || "Please fill in this field.";
+                  input.parentElement.appendChild(err);
+                  
+                  input.addEventListener('input', function removeErr() {
+                      err.remove();
+                      input.removeEventListener('input', removeErr);
+                  });
+              }
+          });
+          return; 
+      }
 
       const btn = form.querySelector("button[type=submit]");
       btn.classList.add("is-sent");
