@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Journal — Stackly Dental Studio</title>
+  <meta name="description"
+    content="Notes on modern dental care from the Stackly Dental Studio team — oral health, cosmetic dentistry, patient stories, and studio news.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <link rel="stylesheet" href="assets/css/inner-hero.css">
+</head>
+
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader-logo">
+    <svg class="preloader-arc" viewBox="0 0 200 100" aria-hidden="true">
+      <path id="preloaderPath" d="M10,40 Q100,110 190,40" fill="none" stroke="currentColor" stroke-width="3"
+        stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav is-scrolled" id="siteNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="services.html" data-nav>Services</a>
+        <a href="blog.html" data-nav>Blog</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="login.html" class="btn btn--sage btn--sm nav__cta">Login</a>
+        <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="blog.html" data-nav>Blog</a>
+      <a href="contact.html" data-nav>Contact</a>
+      <a href="login.html" class="btn btn--sage btn--sm">Login</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 1. BLOG HERO ============ -->
+    <section class="inner-hero" id="blogHero">
+      <div class="inner-hero__bg" aria-hidden="true" style="background-image: url('assets/images/image-7.webp');"></div>
+      <div class="inner-hero__inner">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow__dot"></span> The Stackly Journal
+        </p>
+        <h1 class="inner-hero__title">
+          <span class="line" data-reveal-line>Notes on calmer,</span>
+          <span class="line" data-reveal-line>clearer dental <em>care.</em></span>
+        </h1>
+        <p class="inner-hero__lead" data-reveal>
+          Straight answers on oral health, cosmetic dentistry, and what actually
+          happens behind the studio doors — written by the clinicians who
+          treat you, not a marketing team.
+        </p>
+
+        <div class="inner-hero__actions" id="heroPills" data-reveal style="gap: 0.5rem; margin-top: 1rem;">
+          <span class="pill" data-jump="oral-health" style="background: white; border: 1px solid var(--color-porcelain-line); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;">Oral Health</span>
+          <span class="pill" data-jump="cosmetic" style="background: white; border: 1px solid var(--color-porcelain-line); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;">Cosmetic</span>
+          <span class="pill" data-jump="patient-stories" style="background: white; border: 1px solid var(--color-porcelain-line); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;">Patient Stories</span>
+          <span class="pill" data-jump="prevention" style="background: white; border: 1px solid var(--color-porcelain-line); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;">Prevention</span>
+          <span class="pill" data-jump="studio-news" style="background: white; border: 1px solid var(--color-porcelain-line); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;">Studio News</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. FEATURED POST ============ -->
+    <section class="featured" id="featured">
+      <div class="featured__media" data-reveal>
+        <img src="assets/images/image-5.webp"
+          alt="Dentist reviewing a digital treatment plan with a patient">
+        <span class="featured__tag">Editor's pick</span>
+      </div>
+
+      <div class="featured__copy">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Oral Health · 9 min read</p>
+        <h2 class="section-title" data-reveal>Why “no pain” doesn't mean “no problem” — the quiet signs your teeth are
+          asking for help.</h2>
+        <p class="featured__lead" data-reveal>
+          Most dental damage builds silently for years before it hurts. We asked
+          three Stackly clinicians what they wish every patient noticed sooner —
+          from the texture of your enamel to the sound your jaw makes at 2am.
+        </p>
+        <div class="featured__meta" data-reveal>
+          <img src="assets/images/image.webp"
+            alt="Dr. Maya Lindqvist">
+          <div>
+            <strong>Dr. Maya Lindqvist</strong>
+            <span>Published Aug 3 · Lead Dentist</span>
+          </div>
+        </div>
+        <a href="404.html" class="btn btn--ghost featured__cta" data-reveal>
+          Read the full story
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ 3. TOPICS TICKER + JOURNAL STATS ============ -->
+    <section class="topics" id="topics">
+      <div class="topics__marquee" aria-hidden="true">
+        <div class="topics__track">
+          <span>Root Canals</span><span>&middot;</span>
+          <span>Whitening</span><span>&middot;</span>
+          <span>Veneers &amp; Bonding</span><span>&middot;</span>
+          <span>Kids' First Visits</span><span>&middot;</span>
+          <span>Dental Anxiety</span><span>&middot;</span>
+          <span>Insurance, Explained</span><span>&middot;</span>
+          <span>Implants</span><span>&middot;</span>
+          <span>Root Canals</span><span>&middot;</span>
+          <span>Whitening</span><span>&middot;</span>
+          <span>Veneers &amp; Bonding</span><span>&middot;</span>
+          <span>Kids' First Visits</span><span>&middot;</span>
+          <span>Dental Anxiety</span><span>&middot;</span>
+          <span>Insurance, Explained</span><span>&middot;</span>
+          <span>Implants</span><span>&middot;</span>
+        </div>
+      </div>
+
+      <div class="topics__grid">
+        <div class="topics__item">
+          <span class="topics__num" data-counter="186">0</span>
+          <span class="topics__label">articles published</span>
+        </div>
+        <div class="topics__item">
+          <span class="topics__num" data-counter="42" data-suffix="k">0</span>
+          <span class="topics__label">monthly readers</span>
+        </div>
+        <div class="topics__item">
+          <span class="topics__num" data-counter="7">0</span>
+          <span class="topics__label">min average read</span>
+        </div>
+        <div class="topics__item">
+          <span class="topics__num" data-counter="5">0</span>
+          <span class="topics__label">topics covered</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. ARTICLES GRID (filterable) ============ -->
+    <section class="articles" id="articles">
+      <div class="articles__head">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Browse the journal</p>
+        <h2 class="section-title" data-reveal>Every article, filed by topic.</h2>
+        <p class="articles__sub" data-reveal>Tap a filter to narrow things down.</p>
+      </div>
+
+      <div class="articles__filters" id="articleFilters" data-reveal>
+        <button class="filter-chip is-active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="oral-health">Oral Health</button>
+        <button class="filter-chip" data-filter="cosmetic">Cosmetic</button>
+        <button class="filter-chip" data-filter="patient-stories">Patient Stories</button>
+        <button class="filter-chip" data-filter="prevention">Prevention</button>
+        <button class="filter-chip" data-filter="studio-news">Studio News</button>
+      </div>
+
+      <div class="articles__grid" id="articlesGrid">
+
+        <article class="article-card article-card--wide" data-category="prevention">
+          <div class="article-card__media">
+            <img src="assets/images/image-3.webp"
+              alt="Hygienist performing a routine preventive cleaning">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Prevention</span>
+            <h3>The six-month checkup, decoded — what we're actually looking for.</h3>
+            <p>A walkthrough of every step of a routine exam, from probing depths to the bite-wing X-ray, and why each
+              one matters.</p>
+            <span class="article-card__meta">Aug 12 · 6 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="cosmetic">
+          <div class="article-card__media">
+            <img src="assets/images/image-11.webp"
+              alt="Close-up of a whitened smile">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Cosmetic</span>
+            <h3>Veneers vs. bonding: which one actually fits your smile goals?</h3>
+            <p>Cost, longevity, and how much enamel you're really giving up with each option.</p>
+            <span class="article-card__meta">Aug 8 · 5 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="patient-stories">
+          <div class="article-card__media">
+            <img src="assets/images/patient-2.webp"
+              alt="Portrait of a smiling patient">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Patient Stories</span>
+            <h3>“I hadn't seen a dentist in nine years.” Renata's story.</h3>
+            <p>How one patient went from avoiding the chair entirely to a full, calm restoration plan.</p>
+            <span class="article-card__meta">Aug 5 · 4 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="oral-health">
+          <div class="article-card__media">
+            <img src="assets/images/dental-imapcts.webp"
+              alt="Dentist examining a patient's teeth with a mirror">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Oral Health</span>
+            <h3>Gum bleeding isn't “just from brushing too hard.”</h3>
+            <p>What early gum disease actually looks like, and the three-week test you can do at home.</p>
+            <span class="article-card__meta">Jul 30 · 5 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card article-card--tall" data-category="oral-health">
+          <div class="article-card__media">
+            <img src="assets/images/image-6.webp"
+              alt="3D scan model of dental implant structure">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Oral Health</span>
+            <h3>Implants, explained by the surgeon who places them.</h3>
+            <p>Dr. Farrell breaks down the timeline, healing stages, and what guided surgery actually changes about the
+              outcome — start to finish, in plain language.</p>
+            <span class="article-card__meta">Jul 26 · 8 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="studio-news">
+          <div class="article-card__media">
+            <img src="assets/images/treatment-process.webp"
+              alt="Newly renovated dental treatment room">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Studio News</span>
+            <h3>We renovated Suite 4B — here's a look inside.</h3>
+            <p>Quieter equipment, warmer lighting, and a redesigned recovery lounge for longer procedures.</p>
+            <span class="article-card__meta">Jul 22 · 3 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="prevention">
+          <div class="article-card__media">
+            <img src="assets/images/image-10.webp"
+              alt="Child having a first dental visit">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Prevention</span>
+            <h3>When should your kid's first dental visit actually happen?</h3>
+            <p>The one-year rule most parents haven't heard, and how to make it a non-event for everyone.</p>
+            <span class="article-card__meta">Jul 18 · 4 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="article-card" data-category="patient-stories">
+          <div class="article-card__media">
+            <img src="assets/images/image-1.webp"
+              alt="Patient with clear aligners smiling">
+          </div>
+          <div class="article-card__body">
+            <span class="article-card__tag">Patient Stories</span>
+            <h3>Eighteen months, one aligner tray at a time.</h3>
+            <p>Ines documented her entire clear-aligner journey — including the two weeks she almost quit.</p>
+            <span class="article-card__meta">Jul 14 · 6 min read</span>
+            <a href="404.html" class="article-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="articles__empty" id="articlesEmpty" hidden>No articles in this category yet — check back soon.</p>
+    </section>
+
+    <!-- ============ 5. POPULAR THIS MONTH (drag rail) ============ -->
+    <section class="popular" id="popular">
+      <div class="popular__head">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Most read</p>
+        <h2 class="section-title" data-reveal>Popular this month.</h2>
+      </div>
+
+      <div class="popular__rail" id="popularRail">
+
+        <article class="popular-card">
+          <span class="popular-card__index">01</span>
+          <div class="popular-card__photo">
+            <img src="assets/images/teeth.webp"
+              alt="Close-up dental examination">
+          </div>
+          <div class="popular-card__info">
+            <span class="popular-card__tag">Oral Health</span>
+            <h3>Gum bleeding isn't “just from brushing too hard.”</h3>
+            <span class="popular-card__meta">5 min read</span>
+          </div>
+        </article>
+
+        <article class="popular-card">
+          <span class="popular-card__index">02</span>
+          <div class="popular-card__photo">
+            <img src="assets/images/image-11.webp"
+              alt="Whitened smile close-up">
+          </div>
+          <div class="popular-card__info">
+            <span class="popular-card__tag">Cosmetic</span>
+            <h3>Veneers vs. bonding: which one fits your smile goals?</h3>
+            <span class="popular-card__meta">5 min read</span>
+          </div>
+        </article>
+
+        <article class="popular-card">
+          <span class="popular-card__index">03</span>
+          <div class="popular-card__photo">
+            <img src="assets/images/image-4.webp"
+              alt="Dental implant model">
+          </div>
+          <div class="popular-card__info">
+            <span class="popular-card__tag">Oral Health</span>
+            <h3>Implants, explained by the surgeon who places them.</h3>
+            <span class="popular-card__meta">8 min read</span>
+          </div>
+        </article>
+
+        <article class="popular-card">
+          <span class="popular-card__index">04</span>
+          <div class="popular-card__photo">
+            <img src="assets/images/treatment.webp"
+              alt="Patient portrait smiling">
+          </div>
+          <div class="popular-card__info">
+            <span class="popular-card__tag">Patient Stories</span>
+            <h3>“I hadn't seen a dentist in nine years.”</h3>
+            <span class="popular-card__meta">4 min read</span>
+          </div>
+        </article>
+
+        <article class="popular-card">
+          <span class="popular-card__index">05</span>
+          <div class="popular-card__photo">
+            <img src="assets/images/image-8.webp"
+              alt="Routine dental cleaning">
+          </div>
+          <div class="popular-card__info">
+            <span class="popular-card__tag">Prevention</span>
+            <h3>The six-month checkup, decoded.</h3>
+            <span class="popular-card__meta">6 min read</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ 6. CARE GUIDE ============ -->
+    <section class="blog-care" id="care-guide">
+      <div class="blog-care__intro" data-reveal>
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Your next step</p>
+        <h2 class="section-title section-title--light">Good care starts with a clear next move.</h2>
+        <p class="blog-care__sub">Bring your questions, concerns, or simply a fresh start. We will help you choose the right place to begin.</p>
+        <a href="404.html" class="btn btn--sage">Talk to the studio <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="blog-care__steps">
+        <article class="blog-care__step" data-reveal>
+          <span class="blog-care__number">01</span>
+          <i class="fas fa-comments blog-care__icon" aria-hidden="true"></i>
+          <h3>Share what is bothering you</h3>
+          <p>Tell us what you have noticed, even if you are not sure it matters.</p>
+        </article>
+        <article class="blog-care__step" data-reveal>
+          <span class="blog-care__number">02</span>
+          <i class="fas fa-clipboard-list blog-care__icon" aria-hidden="true"></i>
+          <h3>Get a simple plan</h3>
+          <p>We explain your options in plain language, with time for every question.</p>
+        </article>
+        <article class="blog-care__step" data-reveal>
+          <span class="blog-care__number">03</span>
+          <i class="fas fa-smile-beam blog-care__icon" aria-hidden="true"></i>
+          <h3>Leave feeling looked after</h3>
+          <p>Take home a practical plan for a healthier, calmer smile.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 7. EXPLORE MORE ============ -->
+    <section class="blog-explore" id="explore-more">
+      <div class="blog-explore__head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> Keep exploring</p>
+        <h2 class="section-title">More ways to feel at home here.</h2>
+      </div>
+
+      <div class="blog-explore__links">
+        <a href="404.html" class="blog-explore__link" data-reveal>
+          <span class="blog-explore__icon"><i class="fas fa-tooth" aria-hidden="true"></i></span>
+          <span class="blog-explore__label">Our services</span>
+          <strong>Find the right care for your smile.</strong>
+          <span class="blog-explore__arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="404.html" class="blog-explore__link" data-reveal>
+          <span class="blog-explore__icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+          <span class="blog-explore__label">Meet the studio</span>
+          <strong>See the people behind calmer care.</strong>
+          <span class="blog-explore__arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="404.html" class="blog-explore__link" data-reveal>
+          <span class="blog-explore__icon"><i class="fas fa-comment-medical" aria-hidden="true"></i></span>
+          <span class="blog-explore__label">Get in touch</span>
+          <strong>Bring us your questions, big or small.</strong>
+          <span class="blog-explore__arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo footer__logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+        </a>
+        <p>Personalized dental care focused on healthy smiles, modern treatments, and a comfortable patient experience.
+        </p>
+        <div class="footer__social">
+          <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Care</h4>
+        <a href="404.html">Dental Implants</a>
+        <a href="404.html">Cosmetic Smile Design</a>
+        <a href="404.html">Emergencies</a>
+        <a href="404.html">Digital Scanning</a>
+        <a href="404.html">Clear Aligners</a>
+      </div>
+
+      <div class="footer__col footer__col--contact">
+
+        <h4>Visit</h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;Salem, Tamil Nadu</p>
+        <p><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp; <a href="404.html"> 9876543210</a></p>
+        <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp; <a
+            href="404.html">info@thestackly.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Stackly Dental Studio. All rights reserved.</span>
+      <span class="footer__legal"><a href="404.html">Privacy</a> · <a href="404.html">Terms</a></span>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="assets/js/blog.js"></script>
+</body>
+
+</html>

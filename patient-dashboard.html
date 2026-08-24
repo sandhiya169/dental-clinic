@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard — Stackly Dental Studio</title>
+    <meta name="description" content="View your appointments, treatment plan, billing and messages.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/dashboards.css">
+</head>
+
+<body class="dash-body">
+
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <div class="dash">
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="dash-sidebar" id="dashSidebar">
+            <div class="dash-sidebar__top">
+                <a href="index.html" class="dash-logo">
+                    <img src="assets/images/stackly-logo.webp" alt="Stackly" class="dash-logo__img">
+                </a>
+                <span class="dash-sidebar__email" id="sidebarUserEmail"></span>
+                <button class="dash-sidebar__close" id="dashSidebarClose" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="dash-sidebar__user">
+                <div class="dash-avatar">U</div>
+                <div class="dash-sidebar__user-info">
+                    <strong>User</strong>
+                    <span>Patient</span>
+                </div>
+            </div>
+
+            <nav class="dash-nav" role="tablist" aria-label="Dashboard sections">
+                <p class="dash-nav__label">Menu</p>
+
+                <button type="button" class="dash-nav__item is-active" data-panel="overview" role="tab"
+                    data-title="Overview" data-eyebrow="Your dashboard">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                    Overview
+                </button>
+
+                <button type="button" class="dash-nav__item" data-panel="appointments" role="tab"
+                    data-title="Appointments" data-eyebrow="Book & manage visits">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="4.5" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M3 9.5h18M8 2.5v4M16 2.5v4" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" />
+                    </svg>
+                    Appointments
+                    <span class="dash-nav__badge">2</span>
+                </button>
+
+                <button type="button" class="dash-nav__item" data-panel="treatment" role="tab"
+                    data-title="Treatment Plan" data-eyebrow="Your care journey">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M9 3h6a1 1 0 011 1v1H8V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        <rect x="5" y="5" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M8.5 12.5l2.2 2.2L15.5 10" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Treatment Plan
+                </button>
+
+                <button type="button" class="dash-nav__item" data-panel="billing" role="tab"
+                    data-title="Billing & Messages" data-eyebrow="Invoices & care team">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                    Billing &amp; Messages
+                </button>
+            </nav>
+
+            <div class="dash-sidebar__bottom">
+                <a href="login.html" class="dash-sidebar__link dash-sidebar__link--logout">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M15 17l5-5-5-5M20 12H9M13 21H6a2 2 0 01-2-2V5a2 2 0 012-2h7" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Logout
+                </a>
+                <a href="index.html" class="dash-sidebar__link">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 11l9-8 9 8M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+        </aside>
+
+        <div class="dash-overlay" id="dashOverlay"></div>
+
+        <!-- ============ MAIN ============ -->
+        <div class="dash-main">
+            <header class="dash-topbar">
+                <button class="dash-burger" id="dashBurger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="dash-topbar__title-wrap">
+                    <span class="dash-topbar__eyebrow" id="dashPanelEyebrow">Your dashboard</span>
+                    <h1 class="dash-topbar__title" id="dashPanelTitle">Overview</h1>
+                </div>
+                <div class="dash-topbar__actions">
+                    <span class="dash-user-email" id="dashUserEmail"></span>
+                    <a href="404.html" class="dash-icon-btn" aria-label="Notifications">
+                        <span class="dash-icon-btn__dot"></span>
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.7 21a2 2 0 01-3.4 0" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a href="404.html" class="dash-avatar dash-avatar--sm" aria-label="Your profile">U</a>
+                </div>
+            </header>
+
+            <div class="dash-content">
+
+                <!-- ============ PANEL: OVERVIEW ============ -->
+                <section class="dash-panel is-active" data-panel="overview">
+                    <div class="dash-panel__head">
+                        <div>
+                            <h2 class="dash-panel__heading">Welcome back, <em>User.</em></h2>
+                            <p class="dash-panel__lead">Here's what's happening with your care at Stackly this
+                                week.</p>
+                        </div>
+                        <a href="404.html" class="btn btn--sage btn--sm">Book appointment</a>
+                    </div>
+
+                    <!-- Section 1: Quick stats -->
+                    <div class="dash-section">
+                        <div class="dash-stats">
+                            <div class="dash-stat">
+                                <div class="dash-stat__top">
+                                    <span class="dash-stat__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <rect x="3" y="4.5" width="18" height="16" rx="2.5" stroke="currentColor"
+                                                stroke-width="1.8" />
+                                            <path d="M3 9.5h18" stroke="currentColor" stroke-width="1.8" />
+                                        </svg>
+                                    </span>
+                                    <span class="dash-stat__trend">Next: Fri</span>
+                                </div>
+                                <span class="dash-stat__num">2</span>
+                                <span class="dash-stat__label">Upcoming appointments</span>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat__top">
+                                    <span class="dash-stat__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M8.5 12.5l2.2 2.2L15.5 10" stroke="currentColor" stroke-width="1.8"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                                        </svg>
+                                    </span>
+                                    <span class="dash-stat__trend">On track</span>
+                                </div>
+                                <span class="dash-stat__num">68%</span>
+                                <span class="dash-stat__label">Treatment plan complete</span>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat__top">
+                                    <span class="dash-stat__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor"
+                                                stroke-width="1.8" />
+                                            <path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8" />
+                                        </svg>
+                                    </span>
+                                    <span class="dash-stat__trend dash-stat__trend--down">Due Sep 4</span>
+                                </div>
+                                <span class="dash-stat__num">$180</span>
+                                <span class="dash-stat__label">Outstanding balance</span>
+                            </div>
+                            <div class="dash-stat">
+                                <div class="dash-stat__top">
+                                    <span class="dash-stat__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M4 4h16v13H7l-3 3V4z" stroke="currentColor" stroke-width="1.8"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="dash-stat__trend">New</span>
+                                </div>
+                                <span class="dash-stat__num">1</span>
+                                <span class="dash-stat__label">Unread message</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <div>
+                            <!-- Section 2: Upcoming appointment -->
+                            <div class="dash-section">
+                                <div class="dash-section__head">
+                                    <h3 class="dash-section__title">Your next appointment</h3>
+                                    <button type="button" class="dash-section__link"
+                                        onclick="document.querySelector('[data-panel=appointments]').click()">
+                                        View all
+                                    </button>
+                                </div>
+                                <div class="dash-appt">
+                                    <div class="dash-appt__date">
+                                        <span>Fri</span>
+                                        <strong>29</strong>
+                                    </div>
+                                    <div class="dash-appt__body">
+                                        <h4>Routine cleaning &amp; check-up</h4>
+                                        <div class="dash-appt__meta">
+                                            <span>
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <circle cx="12" cy="12" r="9" stroke="currentColor"
+                                                        stroke-width="1.8" />
+                                                    <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                9:30 AM
+                                            </span>
+                                            <span>
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"
+                                                        stroke="currentColor" stroke-width="1.8" />
+                                                    <circle cx="12" cy="10" r="2.4" stroke="currentColor"
+                                                        stroke-width="1.8" />
+                                                </svg>
+                                                Stackly Studio — Room 2
+                                            </span>
+                                        </div>
+                                        <span class="badge badge--confirmed" style="margin-top:.6rem;">Confirmed</span>
+                                    </div>
+                                    <div class="dash-appt__actions">
+                                        <a href="404.html" class="btn btn--ghost btn--sm">Reschedule</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Quick actions -->
+                            <div class="dash-section">
+                                <div class="dash-section__head">
+                                    <h3 class="dash-section__title">Quick actions</h3>
+                                </div>
+                                <div class="dash-quick">
+                                    <a href="404.html" class="dash-quick__btn">
+                                        <span class="dash-quick__icon">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="4.5" width="18" height="16" rx="2.5"
+                                                    stroke="currentColor" stroke-width="1.8" />
+                                                <path d="M3 9.5h18M12 13v4M10 15h4" stroke="currentColor"
+                                                    stroke-width="1.8" stroke-linecap="round" />
+                                            </svg>
+                                        </span>
+                                        <span>Book appointment</span>
+                                    </a>
+                                    <a href="404.html" class="dash-quick__btn">
+                                        <span class="dash-quick__icon">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M4 4h16v13H7l-3 3V4z" stroke="currentColor" stroke-width="1.8"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span>Message care team</span>
+                                    </a>
+                                    <a href="404.html" class="dash-quick__btn">
+                                        <span class="dash-quick__icon">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <rect x="2.5" y="5" width="19" height="14" rx="2.5"
+                                                    stroke="currentColor" stroke-width="1.8" />
+                                                <path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8" />
+                                            </svg>
+                                        </span>
+                                        <span>Pay balance</span>
+                                    </a>
+                                    <a href="404.html" class="dash-quick__btn">
+                                        <span class="dash-quick__icon">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="8" r="3.5" stroke="currentColor"
+                                                    stroke-width="1.8" />
+                                                <path d="M4.5 20a7.5 7.5 0 0115 0" stroke="currentColor"
+                                                    stroke-width="1.8" stroke-linecap="round" />
+                                            </svg>
+                                        </span>
+                                        <span>Edit profile</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Care team -->
+                        <div class="dash-section">
+                            <div class="dash-section__head">
+                                <h3 class="dash-section__title">Your care team</h3>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-person">
+                                    <div class="dash-avatar dash-avatar--gold">DR</div>
+                                    <div class="dash-person__info">
+                                        <strong>Dr. Elena Ross</strong>
+                                        <span>General &amp; Cosmetic Dentist</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn dash-person__action">Message</a>
+                                </div>
+                                <div class="dash-person">
+                                    <div class="dash-avatar">MK</div>
+                                    <div class="dash-person__info">
+                                        <strong>Maya Kessler</strong>
+                                        <span>Dental Hygienist</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn dash-person__action">Message</a>
+                                </div>
+                                <div class="dash-person">
+                                    <div class="dash-avatar dash-avatar--gold">TN</div>
+                                    <div class="dash-person__info">
+                                        <strong>Theo Nakamura</strong>
+                                        <span>Front Desk Coordinator</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn dash-person__action">Message</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ PANEL: APPOINTMENTS ============ -->
+                <section class="dash-panel" data-panel="appointments">
+                    <div class="dash-panel__head">
+                        <div>
+                            <h2 class="dash-panel__heading">Your <em>appointments.</em></h2>
+                            <p class="dash-panel__lead">Manage upcoming visits and review your appointment history.
+                            </p>
+                        </div>
+                        <a href="404.html" class="btn btn--sage btn--sm">Book new appointment</a>
+                    </div>
+
+                    <!-- Section 1: Upcoming -->
+                    <div class="dash-section">
+                        <div class="dash-section__head">
+                            <h3 class="dash-section__title">Upcoming</h3>
+                        </div>
+                        <div class="dash-appt">
+                            <div class="dash-appt__date"><span>Fri</span><strong>29</strong></div>
+                            <div class="dash-appt__body">
+                                <h4>Routine cleaning &amp; check-up</h4>
+                                <div class="dash-appt__meta">
+                                    <span>9:30 AM · 45 min</span>
+                                    <span>Dr. Elena Ross</span>
+                                </div>
+                                <span class="badge badge--confirmed" style="margin-top:.6rem;">Confirmed</span>
+                            </div>
+                            <div class="dash-appt__actions">
+                                <a href="404.html" class="btn btn--ghost btn--sm">Reschedule</a>
+                                <a href="404.html" class="btn btn--ghost btn--sm">Cancel</a>
+                            </div>
+                        </div>
+                        <div class="dash-appt">
+                            <div class="dash-appt__date"><span>Oct</span><strong>14</strong></div>
+                            <div class="dash-appt__body">
+                                <h4>Clear aligner fitting</h4>
+                                <div class="dash-appt__meta">
+                                    <span>2:00 PM · 30 min</span>
+                                    <span>Dr. Elena Ross</span>
+                                </div>
+                                <span class="badge badge--pending" style="margin-top:.6rem;">Pending confirmation</span>
+                            </div>
+                            <div class="dash-appt__actions">
+                                <a href="404.html" class="btn btn--ghost btn--sm">Reschedule</a>
+                                <a href="404.html" class="btn btn--ghost btn--sm">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Past -->
+                    <div class="dash-section">
+                        <div class="dash-section__head">
+                            <h3 class="dash-section__title">Past visits</h3>
+                        </div>
+                        <div class="dash-table-wrap">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Treatment</th>
+                                        <th>Dentist</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jun 12, 2026</td>
+                                        <td>Deep cleaning</td>
+                                        <td>Dr. Elena Ross</td>
+                                        <td><span class="badge badge--completed">Completed</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">View notes</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feb 3, 2026</td>
+                                        <td>Cavity filling — #14</td>
+                                        <td>Dr. Elena Ross</td>
+                                        <td><span class="badge badge--completed">Completed</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">View notes</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nov 21, 2025</td>
+                                        <td>Routine check-up</td>
+                                        <td>Dr. Elena Ross</td>
+                                        <td><span class="badge badge--cancelled">Cancelled</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">View notes</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Book new -->
+                    <div class="dash-section">
+                        <div class="dash-card"
+                            style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+                            <div>
+                                <h3 class="dash-section__title" style="margin-bottom:.3rem;">Need to see us sooner?
+                                </h3>
+                                <p style="color:var(--color-espresso-soft);font-size:.9rem;">We hold same-week slots
+                                    for existing patients.</p>
+                            </div>
+                            <a href="404.html" class="btn btn--sage btn--sm">Book new appointment</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ PANEL: TREATMENT PLAN ============ -->
+                <section class="dash-panel" data-panel="treatment">
+                    <div class="dash-panel__head">
+                        <div>
+                            <h2 class="dash-panel__heading">Your <em>treatment plan.</em></h2>
+                            <p class="dash-panel__lead">Track progress on your active plan and review your records.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <div>
+                            <!-- Section 1: Active plan / timeline -->
+                            <div class="dash-section">
+                                <div class="dash-card">
+                                    <div class="dash-section__head" style="margin-bottom:.2rem;">
+                                        <h3 class="dash-section__title">Clear Aligner Program</h3>
+                                        <span class="badge badge--confirmed">In progress</span>
+                                    </div>
+                                    <div class="dash-progress">
+                                        <div class="dash-progress__top">
+                                            <span>68% complete</span>
+                                            <span>Est. finish: Jan 2027</span>
+                                        </div>
+                                        <div class="dash-progress__bar">
+                                            <div class="dash-progress__fill" style="width:68%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dash-timeline">
+                                        <div class="dash-timeline__step dash-timeline__step--done">
+                                            <div class="dash-timeline__marker">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor"
+                                                        stroke-width="2.4" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="dash-timeline__body">
+                                                <h4>Initial scan &amp; consultation</h4>
+                                                <p>Completed Mar 2026</p>
+                                            </div>
+                                        </div>
+                                        <div class="dash-timeline__step dash-timeline__step--done">
+                                            <div class="dash-timeline__marker">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor"
+                                                        stroke-width="2.4" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="dash-timeline__body">
+                                                <h4>Aligners 1–8 delivered</h4>
+                                                <p>Completed Jun 2026</p>
+                                            </div>
+                                        </div>
+                                        <div class="dash-timeline__step dash-timeline__step--current">
+                                            <div class="dash-timeline__marker"></div>
+                                            <div class="dash-timeline__body">
+                                                <h4>Aligners 9–14, fitting check</h4>
+                                                <p>In progress — next fitting Oct 14</p>
+                                            </div>
+                                        </div>
+                                        <div class="dash-timeline__step">
+                                            <div class="dash-timeline__marker"></div>
+                                            <div class="dash-timeline__body">
+                                                <h4>Final aligners &amp; retainer fitting</h4>
+                                                <p>Upcoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Notes from dentist -->
+                            <div class="dash-section">
+                                <div class="dash-section__head">
+                                    <h3 class="dash-section__title">Notes from your dentist</h3>
+                                </div>
+                                <div class="dash-card">
+                                    <p style="font-size:.88rem;color:var(--color-espresso-soft);line-height:1.7;">
+                                        "Great progress so far — teeth are tracking well with the current aligner
+                                        set. Keep wearing 20–22 hours a day and bring your case to the next fitting
+                                        so we can check for any pressure spots."
+                                    </p>
+                                    <p
+                                        style="margin-top:.8rem;font-family:var(--font-mono);font-size:.75rem;color:var(--color-espresso-soft);">
+                                        — Dr. Elena Ross, Jun 2026
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Documents -->
+                        <div class="dash-section">
+                            <div class="dash-section__head">
+                                <h3 class="dash-section__title">Records &amp; X-rays</h3>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-file">
+                                    <span class="dash-file__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                            <path d="M15 3v5h5" stroke="currentColor" stroke-width="1.8"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="dash-file__info">
+                                        <strong>Panoramic X-ray</strong>
+                                        <span>Mar 2026 · 2.4 MB</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn">View</a>
+                                </div>
+                                <div class="dash-file">
+                                    <span class="dash-file__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                            <path d="M15 3v5h5" stroke="currentColor" stroke-width="1.8"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="dash-file__info">
+                                        <strong>Intraoral scan report</strong>
+                                        <span>Mar 2026 · 5.1 MB</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn">View</a>
+                                </div>
+                                <div class="dash-file">
+                                    <span class="dash-file__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                            <path d="M15 3v5h5" stroke="currentColor" stroke-width="1.8"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="dash-file__info">
+                                        <strong>Treatment consent form</strong>
+                                        <span>Mar 2026 · 180 KB</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn">View</a>
+                                </div>
+                                <a href="404.html" class="btn btn--ghost btn--sm btn--block"
+                                    style="margin-top:1rem;">Upload
+                                    a document</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ PANEL: BILLING & MESSAGES ============ -->
+                <section class="dash-panel" data-panel="billing">
+                    <div class="dash-panel__head">
+                        <div>
+                            <h2 class="dash-panel__heading">Billing &amp; <em>messages.</em></h2>
+                            <p class="dash-panel__lead">Review invoices, manage payment methods and stay in touch
+                                with your care team.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 1: Invoices -->
+                    <div class="dash-section">
+                        <div class="dash-section__head">
+                            <h3 class="dash-section__title">Invoices</h3>
+                        </div>
+                        <div class="dash-table-wrap">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>INV-1042</td>
+                                        <td>Aug 4, 2026</td>
+                                        <td>$180.00</td>
+                                        <td><span class="badge badge--overdue">Due Sep 4</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">Pay now</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0981</td>
+                                        <td>Jun 12, 2026</td>
+                                        <td>$240.00</td>
+                                        <td><span class="badge badge--paid">Paid</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">Download</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0864</td>
+                                        <td>Feb 3, 2026</td>
+                                        <td>$95.00</td>
+                                        <td><span class="badge badge--paid">Paid</span></td>
+                                        <td><a href="404.html" class="dash-table-btn">Download</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <!-- Section 2: Payment methods -->
+                        <div class="dash-section">
+                            <div class="dash-section__head">
+                                <h3 class="dash-section__title">Payment methods</h3>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-person">
+                                    <div class="dash-avatar" style="background:var(--color-espresso-soft);">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                                            <rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor"
+                                                stroke-width="1.8" />
+                                            <path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8" />
+                                        </svg>
+                                    </div>
+                                    <div class="dash-person__info">
+                                        <strong>Visa •••• 4291</strong>
+                                        <span>Expires 08/28</span>
+                                    </div>
+                                    <a href="404.html" class="dash-table-btn dash-person__action">Edit</a>
+                                </div>
+                                <a href="404.html" class="btn btn--ghost btn--sm btn--block"
+                                    style="margin-top:1rem;">Add
+                                    payment method</a>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Messages -->
+                        <div class="dash-section">
+                            <div class="dash-section__head">
+                                <h3 class="dash-section__title">Messages with your care team</h3>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-thread" id="dashMsgThread">
+                                    <div class="dash-msg dash-msg--in">
+                                        Hi Jordan! Just a reminder to bring your aligner case to Friday's fitting.
+                                        <span>Dr. Elena Ross · 10:12 AM</span>
+                                    </div>
+                                    <div class="dash-msg dash-msg--out">
+                                        Sounds good, see you then!
+                                        <span>You · 10:20 AM</span>
+                                    </div>
+                                    <div class="dash-msg dash-msg--in">
+                                        Also — your Sep invoice is ready whenever you get a chance to look at it.
+                                        <span>Front Desk · 11:03 AM</span>
+                                    </div>
+                                </div>
+                                <form id="dashMsgForm" class="dash-msg-input">
+                                    <input type="text" id="dashMsgInput" placeholder="Write a message…"
+                                        autocomplete="off">
+                                    <button type="submit" class="btn btn--sage btn--sm">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/dashboards.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Dental Studio — A calmer kind of care for your smile</title>
+  <meta name="description"
+    content="Stackly Dental Studio is a boutique dental practice blending precision dentistry with spa-level comfort.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    media="not all">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader-logo">
+    <svg class="preloader-arc" viewBox="0 0 200 100" aria-hidden="true">
+      <path id="preloaderPath" d="M10,40 Q100,110 190,40" fill="none" stroke="currentColor" stroke-width="3"
+        stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav is-scrolled" id="siteNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="services.html" data-nav>Services</a>
+        <a href="blog.html" data-nav>Blog</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="login.html" class="btn btn--sage btn--sm nav__cta">Login</a>
+        <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="blog.html" data-nav>Blog</a>
+      <a href="contact.html" data-nav>Contact</a>
+      <a href="login.html" class="btn btn--sage btn--sm">Login</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow" data-reveal>
+            <span class="eyebrow__dot"></span> Boutique Dental Studio &middot; Est. 2012
+          </p>
+          <h1 class="hero__title">
+            <span class="line" data-reveal-line>A calmer kind</span>
+            <span class="line" data-reveal-line>of care for your <em>smile.</em></span>
+          </h1>
+          <p class="hero__sub" data-reveal>
+            Stackly blends precision dentistry with unhurried, spa-level comfort —
+            so every visit feels considered, gentle, and genuinely good for you.
+          </p>
+
+          <div class="hero__ctas" data-reveal>
+            <a href="404.html" class="btn btn--sage">Book a visit</a>
+            <a href="404.html" class="btn btn--ghost">
+              Explore services
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__trust" data-reveal>
+            <div class="hero__trust-item">
+              <strong>4.9<span>★</span></strong>
+              <span>800+ patient reviews</span>
+            </div>
+            <div class="hero__trust-divider" aria-hidden="true"></div>
+            <div class="hero__trust-item">
+              <strong>12</strong>
+              <span>years in practice</span>
+            </div>
+            <div class="hero__trust-divider" aria-hidden="true"></div>
+            <div class="hero__trust-item">
+              <strong>Same</strong>
+              <span>week appointments</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <img src="assets/images/image-6.webp"
+              alt="Bright, modern dental treatment room with a reclined chair and equipment" loading="eager">
+            <div class="hero__badge">
+              <span class="hero__badge-num" data-counter="14200">0</span>
+              <span class="hero__badge-label">smiles cared for</span>
+            </div>
+          </div>
+          <svg class="hero__arc" viewBox="0 0 520 220" aria-hidden="true">
+            <path id="heroArcPath" d="M10,60 C 150,220 370,220 510,60" fill="none" stroke="var(--color-gold)"
+              stroke-width="2" stroke-linecap="round" stroke-dasharray="4 10" />
+          </svg>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ============ 2. TRUST / STATS STRIP ============ -->
+    <section class="stats" id="stats">
+      <div class="stats__marquee" aria-hidden="true">
+        <div class="stats__track">
+          <span>Painless Injections</span><span>&middot;</span>
+          <span>Digital 3D Scanning</span><span>&middot;</span>
+          <span>Same-Day Emergency Care</span><span>&middot;</span>
+          <span>Sedation Options</span><span>&middot;</span>
+          <span>Insurance Friendly</span><span>&middot;</span>
+          <span>Painless Injections</span><span>&middot;</span>
+          <span>Digital 3D Scanning</span><span>&middot;</span>
+          <span>Same-Day Emergency Care</span><span>&middot;</span>
+          <span>Sedation Options</span><span>&middot;</span>
+          <span>Insurance Friendly</span><span>&middot;</span>
+        </div>
+      </div>
+
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__num" data-counter="14200">0</span>
+          <span class="stats__label">smiles treated</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-counter="98" data-suffix="%">0</span>
+          <span class="stats__label">comfort satisfaction</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-counter="12">0</span>
+          <span class="stats__label">years in practice</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-counter="6" data-suffix="k+">0</span>
+          <span class="stats__label">implants placed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT / PHILOSOPHY ============ -->
+    <section class="about" id="about">
+      <div class="about__visual" data-reveal>
+        <div class="about__image about__image--main">
+          <img src="assets/images/image-9.webp"
+            alt="Dentist performing a careful examination with a mirror and dental tool">
+        </div>
+        <div class="about__image about__image--small">
+          <img src="assets/images/image-8.webp"
+            alt="Calm, sunlit dental studio treatment chair">
+        </div>
+        <div class="about__ring" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-sage)" stroke-width="1.5"
+              stroke-dasharray="2 8" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="about__copy">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Why Stackly</p>
+        <h2 class="section-title" data-reveal>Dentistry, without the dread.</h2>
+        <p class="about__lead" data-reveal>
+          Most people put off dental care because it feels clinical, rushed, or
+          unfamiliar. We built Stackly to be the opposite — a studio where every
+          material, sound, and interaction is chosen to keep you at ease.
+        </p>
+
+        <div class="about__pillars">
+          <div class="about__pillar" data-reveal>
+            <span class="about__pillar-tag">Comfort</span>
+            <p>Warm-lit rooms, noise-dampened equipment, and a team trained to
+              explain every step before it happens.</p>
+          </div>
+          <div class="about__pillar" data-reveal>
+            <span class="about__pillar-tag">Precision</span>
+            <p>Digital scanning and guided planning replace guesswork, so
+              treatment is accurate the first time.</p>
+          </div>
+          <div class="about__pillar" data-reveal>
+            <span class="about__pillar-tag">Transparency</span>
+            <p>Clear pricing and a written plan before any work begins —
+              no surprises at checkout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="services__head">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Care, tailored</p>
+        <h2 class="section-title" data-reveal>Everything your smile needs, under one roof.</h2>
+        <p class="services__sub" data-reveal>Hover a service to see it in the studio.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card service-card--wide">
+          <div class="service-card__media">
+            <img src="assets/images/image-3.webp"
+              alt="Dental treatment chair used for preventive hygiene visits">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 4c-6 0-10 4-10 9 0 4 2 5 2 9 0 2 1.5 3 3 3s2-1 2-3v-2c0-1 1-1 1 0v2c0 2 1 3 2 3s2-1 2-3c0-4 2-5 2-9 0-5-4-9-10-9Z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <h3>Preventive &amp; Hygiene Care</h3>
+            <p>Routine exams, cleanings, and early detection to keep small
+              issues from becoming big ones.</p>
+            <a href="404.html" class="service-card__link">Book a cleaning <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="assets/images/patient-3.webp"
+              alt="Close-up of a bright, healthy smile after cosmetic treatment">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <path d="M6 14c4 6 16 6 20 0" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" />
+                <circle cx="10" cy="10" r="1.4" fill="currentColor" />
+                <circle cx="22" cy="10" r="1.4" fill="currentColor" />
+              </svg>
+            </span>
+            <h3>Cosmetic Smile Design</h3>
+            <p>Whitening, veneers, and bonding planned around your face,
+              not a template.</p>
+            <a href="404.html" class="service-card__link">Design my smile <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="assets/images/teeth.webp"
+              alt="Dental implant model illustrating tooth structure">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 4v10m0 0-4 14h8l-4-14Z" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <h3>Dental Implants</h3>
+            <p>Single-tooth to full-arch replacement, guided by 3D imaging
+              for a natural result.</p>
+            <a href="404.html" class="service-card__link">Ask about implants <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="assets/images/treatment.webp"
+              alt="Dentist examining a patient using a digital dental scanner">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <rect x="8" y="6" width="16" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M12 12h8M12 16h8M12 20h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </span>
+            <h3>Clear Aligners</h3>
+            <p>Straighten teeth with a digital plan you can preview before
+              the first tray ever ships.</p>
+            <a href="404.html" class="service-card__link">Start my plan <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card service-card--tall">
+          <div class="service-card__media">
+            <img src="assets/images/treatment-1.webp"
+              alt="Dentist reviewing notes as part of a restorative treatment plan">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <path d="M8 20c0-8 4-12 8-12s8 4 8 12" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" />
+                <path d="M6 20h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </span>
+            <h3>Restorative &amp; Root Canal</h3>
+            <p>Same-tooth-day fillings, crowns, and root canal therapy —
+              handled gently, with sedation available.</p>
+            <a href="404.html" class="service-card__link">Get relief <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1667133295352-ef4c83620e8e?auto=format&fit=crop&w=800&q=80"
+              alt="Patient holding their jaw, representing urgent dental discomfort">
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 6v10l7 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </span>
+            <h3>Same-Day Emergencies</h3>
+            <p>Sudden pain or a chipped tooth doesn't wait — reserved
+              same-day slots, every weekday.</p>
+            <a href="404.html" class="service-card__link">Get seen today <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article> -->
+
+      </div>
+    </section>
+
+    <!-- ============ 5. PROCESS ============ -->
+    <section class="process" id="process">
+      <div class="process__inner">
+
+        <!-- heading row -->
+        <div class="process__head">
+          <p class="eyebrow"><span class="eyebrow__dot"></span> How it works</p>
+          <h2 class="section-title process__title">Five steps, one <em>unhurried</em> visit.</h2>
+          <p class="process__lead">Every appointment follows the same calm sequence — so you always know what comes next.</p>
+        </div>
+
+        <!-- image reveal pane (desktop) -->
+        <div class="process__img-pane" aria-hidden="true" id="processImgPane">
+          <div class="process__img-wrap">
+            <img src="assets/images/consultation.webp" alt="" id="processImg" class="process__img">
+          </div>
+        </div>
+
+        <!-- step rows -->
+        <ol class="process__list">
+
+          <li class="process__item"
+              data-img="assets/images/consultation.webp">
+            <span class="process__item-num" aria-hidden="true">01</span>
+            <div class="process__item-center">
+              <h3 class="process__item-title">Consultation</h3>
+              <p class="process__item-desc">A relaxed conversation about your goals and concerns — no clipboard rush.</p>
+            </div>
+            <span class="process__item-tag">~15 min</span>
+          </li>
+
+          <li class="process__item"
+              data-img="assets/images/image-5.webp">
+            <span class="process__item-num" aria-hidden="true">02</span>
+            <div class="process__item-center">
+              <h3 class="process__item-title">Digital Scan</h3>
+              <p class="process__item-desc">A radiation-light 3D scan builds an exact model of your bite in under two minutes.</p>
+            </div>
+            <span class="process__item-tag">~2 min</span>
+          </li>
+
+          <li class="process__item"
+              data-img="assets/images/process.webp">
+            <span class="process__item-num" aria-hidden="true">03</span>
+            <div class="process__item-center">
+              <h3 class="process__item-title">Custom Plan</h3>
+              <p class="process__item-desc">Treatment, timeline, and cost in writing before anything is scheduled.</p>
+            </div>
+            <span class="process__item-tag">Transparent pricing</span>
+          </li>
+
+          <li class="process__item"
+              data-img="assets/images/images.webp">
+            <span class="process__item-num" aria-hidden="true">04</span>
+            <div class="process__item-center">
+              <h3 class="process__item-title">Treatment</h3>
+              <p class="process__item-desc">Procedures paced to you, with breaks offered and numbing checked twice.</p>
+            </div>
+            <span class="process__item-tag">Your pace</span>
+          </li>
+
+          <li class="process__item"
+              data-img="assets/images/dental-care.webp">
+            <span class="process__item-num" aria-hidden="true">05</span>
+            <div class="process__item-center">
+              <h3 class="process__item-title">Aftercare</h3>
+              <p class="process__item-desc">A personal follow-up call within 48 hours — not just an invoice.</p>
+            </div>
+            <span class="process__item-tag">48 hr follow-up</span>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ============ 6. TEAM ============ -->
+    <section class="team" id="team">
+      <div class="team__inner">
+
+        <!-- left: heading + member list -->
+        <div class="team__left">
+          <p class="eyebrow"><span class="eyebrow__dot"></span> Meet the studio</p>
+          <h2 class="section-title team__title">Clinicians who<br>explain, not<br>just <em>treat.</em></h2>
+
+          <ul class="team__index" role="list">
+            <li class="team__index-item is-active" data-member="0" tabindex="0">
+              <span class="team__index-num">01</span>
+              <div>
+                <strong>Dr. Naomi Voss</strong>
+                <span>Lead Dentist · Cosmetic &amp; Restorative</span>
+              </div>
+              <svg class="team__index-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </li>
+            <li class="team__index-item" data-member="1" tabindex="0">
+              <span class="team__index-num">02</span>
+              <div>
+                <strong>Dr. Owen Farrell</strong>
+                <span>Oral Surgeon · Implants</span>
+              </div>
+              <svg class="team__index-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </li>
+            <li class="team__index-item" data-member="2" tabindex="0">
+              <span class="team__index-num">03</span>
+              <div>
+                <strong>Dr. Nathan</strong>
+                <span>Orthodontics · Clear Aligners</span>
+              </div>
+              <svg class="team__index-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </li>
+            <li class="team__index-item" data-member="3" tabindex="0">
+              <span class="team__index-num">04</span>
+              <div>
+                <strong>Dr. Sam Okafor</strong>
+                <span>General &amp; Preventive Care</span>
+              </div>
+              <svg class="team__index-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </li>
+          </ul>
+
+          <!-- bio panel, swapped by JS -->
+          <div class="team__bio" id="teamBio">
+            <p class="team__bio-text" id="teamBioText">14 years practicing, with a focus on natural-looking veneer and bonding work that complements each patient's face.</p>
+          </div>
+        </div>
+
+        <!-- right: featured photo -->
+        <div class="team__right">
+          <div class="team__photo-wrap" id="teamPhotoWrap">
+            <img
+              id="teamFeaturedImg"
+              class="team__featured-img"
+              src="assets/images/doctor-3.webp"
+              alt="Dr. Elena Cho">
+            <div class="team__photo-badge" id="teamBadge">
+              <span class="team__badge-name" id="teamBadgeName">Dr. Naomi Voss</span>
+              <span class="team__badge-role" id="teamBadgeRole">Lead Dentist · Cosmetic &amp; Restorative</span>
+            </div>
+          </div>
+
+          <!-- thumbnail strip -->
+          <div class="team__thumbs" id="teamThumbs" aria-label="Team members">
+            <button class="team__thumb is-active" data-member="0" aria-label="Dr. Maya Lindqvist">
+              <img src="assets/images/doctor-3.webp" alt="">
+            </button>
+            <button class="team__thumb" data-member="1" aria-label="Dr. Owen Farrell">
+              <img src="assets/images/doctor-4.webp" alt="">
+            </button>
+            <button class="team__thumb" data-member="2" aria-label="Dr. Priya Nathan">
+              <img src="assets/images/doctor-5.webp" alt="">
+            </button>
+            <button class="team__thumb" data-member="3" aria-label="Dr. Sam Okafor">
+              <img src="assets/images/doctor-2.webp" alt="">
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 7. STUDIO TOUR ============ -->
+    <section class="studio" id="gallery">
+
+      <!-- Background slides -->
+      <div class="studio__slides" aria-hidden="true">
+        <div class="studio__slide is-active" data-slide="reception">
+          <img src="assets/images/reception.webp"
+               alt="Stackly reception and waiting area">
+        </div>
+        <div class="studio__slide" data-slide="treatment">
+          <img src="assets/images/dental-tratment.webp"
+               alt="Stackly treatment room with dental chair">
+        </div>
+        <div class="studio__slide" data-slide="technology">
+          <img src="assets/images/treatment-process.webp"
+               alt="Stackly digital scanning technology">
+        </div>
+        <div class="studio__slide" data-slide="recovery">
+          <img src="assets/images/process.webp"
+               alt="Stackly calm recovery area">
+        </div>
+      </div>
+
+      <!-- Overlay gradient -->
+      <div class="studio__overlay" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="studio__content">
+        <div class="studio__explore" aria-hidden="true">
+          <svg viewBox="0 0 14 14" width="12" height="12" fill="none">
+            <path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Explore the space</span>
+        </div>
+
+        <nav class="studio__tabs" role="tablist" aria-label="Studio areas">
+          <button class="studio__tab is-active" role="tab" aria-selected="true"
+                  aria-controls="slide-reception" data-tab="reception">
+            Reception
+          </button>
+          <button class="studio__tab" role="tab" aria-selected="false"
+                  aria-controls="slide-treatment" data-tab="treatment">
+            Treatment
+          </button>
+          <button class="studio__tab" role="tab" aria-selected="false"
+                  aria-controls="slide-technology" data-tab="technology">
+            Technology
+          </button>
+          <button class="studio__tab" role="tab" aria-selected="false"
+                  aria-controls="slide-recovery" data-tab="recovery">
+            Recovery
+          </button>
+        </nav>
+      </div>
+
+      <!-- Caption -->
+      <div class="studio__captions" aria-live="polite">
+        <div class="studio__caption is-active" data-caption="reception">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Inside the studio</p>
+          <h2 class="studio__caption-title">A warm welcome from the moment you arrive.</h2>
+        </div>
+        <div class="studio__caption" data-caption="treatment">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Inside the studio</p>
+          <h2 class="studio__caption-title">Treatment rooms designed for calm, not clinical.</h2>
+        </div>
+        <div class="studio__caption" data-caption="technology">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Inside the studio</p>
+          <h2 class="studio__caption-title">Precision tools that make every scan two minutes.</h2>
+        </div>
+        <div class="studio__caption" data-caption="recovery">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Inside the studio</p>
+          <h2 class="studio__caption-title">A quiet space to rest before you head home.</h2>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ 8. TESTIMONIALS ============ -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__head">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Patient stories</p>
+        <h2 class="section-title" data-reveal>Would they send a friend? They did.</h2>
+      </div>
+
+      <div class="testimonials__rail" id="testimonialRail">
+
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“I used to cancel dentist appointments out of pure anxiety. Stackly
+            is the first practice that actually explained what was happening
+            before touching anything.”</p>
+          <div class="t-card__person">
+            <img src="assets/images/patient-1.webp"
+              alt="Portrait of Renata A.">
+            <div>
+              <strong>Renata A.</strong>
+              <span>Patient since 2021</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“Got my implant consultation, scan, and written plan in one
+            sitting — no vague estimate, no pressure to decide on the spot.”</p>
+          <div class="t-card__person">
+            <img src="assets/images/patient-2.webp"
+              alt="Portrait of Daniel K.">
+            <div>
+              <strong>Daniel K.</strong>
+              <span>Implant patient</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“Chipped a tooth on a Tuesday morning and was in the chair by
+            1pm the same day. Genuinely didn't expect that.”</p>
+          <div class="t-card__person">
+            <img src="assets/images/patient-3.webp"
+              alt="Portrait of Wren S.">
+            <div>
+              <strong>Wren S.</strong>
+              <span>Emergency visit</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“Eighteen months of clear aligners with Dr. Nathan and I still
+            recommend Stackly to anyone who'll listen.”</p>
+          <div class="t-card__person">
+            <img src="assets/images/patient-4.webp"
+              alt="Portrait of Ines M.">
+            <div>
+              <strong>Ines M.</strong>
+              <span>Aligner patient</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="testimonials__nav">
+        <button id="tPrev" aria-label="Previous story">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button id="tNext" aria-label="Next story">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ 9. BOOKING CTA ============ -->
+    <section class="book" id="book">
+      <div class="book__panel">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Reserve your visit</p>
+        <h2 class="section-title section-title--light">
+          Your calmer appointment starts with one form.
+        </h2>
+        <p class="book__sub">
+          Tell us a little about what you need. Our care coordinator replies
+          within one business day to confirm a time.
+        </p>
+
+        <ul class="book__hours">
+          <li><span>Mon – Fri</span><span>8:00 – 19:00</span></li>
+          <li><span>Saturday</span><span>9:00 – 15:00</span></li>
+          <li><span>Sunday</span><span>Emergencies only</span></li>
+        </ul>
+      </div>
+
+      <form class="book__form" id="bookingForm" novalidate>
+        <div class="book__row">
+          <div class="book__field">
+            <label for="bfName">Full name</label>
+            <input type="text" id="bfName" name="name" required placeholder="Jordan Lee">
+          </div>
+          <div class="book__field">
+            <label for="bfPhone">Phone</label>
+            <input type="tel" id="bfPhone" name="phone" required placeholder="(555) 012-3456">
+          </div>
+        </div>
+
+        <div class="book__row">
+          <div class="book__field">
+            <label for="bfService">Service</label>
+            <select id="bfService" name="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option>Preventive &amp; Hygiene Care</option>
+              <option>Cosmetic Smile Design</option>
+              <option>Dental Implants</option>
+              <option>Clear Aligners</option>
+              <option>Restorative &amp; Root Canal</option>
+              <option>Same-Day Emergency</option>
+            </select>
+          </div>
+          <div class="book__field">
+            <label for="bfDate">Preferred date</label>
+            <input type="date" id="bfDate" name="date" required>
+          </div>
+        </div>
+
+        <div class="book__field">
+          <label for="bfNote">Anything we should know?</label>
+          <textarea id="bfNote" name="note" rows="3"
+            placeholder="Sensitivity, anxiety, previous treatment — whatever helps us prepare."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--sage btn--block">
+          <span class="btn__label">Request appointment</span>
+          <span class="btn__success">Request sent — we'll be in touch ✓</span>
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+
+
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo footer__logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+        </a>
+        <p>Personalized dental care focused on healthy smiles, modern treatments, and a comfortable patient experience.
+        </p>
+        <div class="footer__social">
+          <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Care</h4>
+        <a href="404.html">Dental Implants</a>
+        <a href="404.html">Cosmetic Smile Design</a>
+        <a href="404.html">Emergencies</a>
+        <a href="404.html">Digital Scanning</a>
+        <a href="404.html">Clear Aligners</a>
+      </div>
+
+      <div class="footer__col footer__col--contact">
+
+        <h4>Visit</h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;Salem, Tamil Nadu</p>
+        <p><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp; <a href="404.html"> 9876543210</a></p>
+        <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp; <a
+            href="404.html">info@thestackly.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <span id="year"></span> Stackly Dental Studio. All rights reserved.</span>
+      <span class="footer__legal"><a href="404.html">Privacy</a> &middot; <a href="404.html">Terms</a></span>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

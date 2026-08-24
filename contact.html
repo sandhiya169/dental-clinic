@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Stackly Dental Studio</title>
+    <meta name="description"
+        content="Reach Stackly Dental Studio by phone, WhatsApp or email, find directions to the studio, or send us a message. We reply within one business day.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        media="not all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/inner-hero.css">
+</head>
+
+<body>
+
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader-logo">
+        <svg class="preloader-arc" viewBox="0 0 200 100" aria-hidden="true">
+            <path id="preloaderPath" d="M10,40 Q100,110 190,40" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav is-scrolled" id="siteNav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+            </a>
+
+            <nav class="nav__links" id="navLinks">
+                <a href="index.html" data-nav>Home</a>
+                <a href="about.html" data-nav>About</a>
+                <a href="services.html" data-nav>Services</a>
+                <a href="blog.html" data-nav>Blog</a>
+                <a href="contact.html" data-nav>Contact</a>
+            </nav>
+
+            <div class="nav__actions">
+                <a href="login.html" class="btn btn--sage btn--sm nav__cta">Login</a>
+                <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav__mobile" id="navMobile">
+            <a href="index.html" data-nav>Home</a>
+            <a href="about.html" data-nav>About</a>
+            <a href="services.html" data-nav>Services</a>
+            <a href="blog.html" data-nav>Blog</a>
+            <a href="contact.html" data-nav>Contact</a>
+            <a href="login.html" class="btn btn--sage btn--sm">Login</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ============ 1. CONTACT HERO ============ -->
+        <section class="inner-hero" id="contact-hero">
+            <div class="inner-hero__bg" aria-hidden="true" style="background-image: url('assets/images/image-3.webp');"></div>
+            <div class="inner-hero__inner">
+                <p class="eyebrow" data-reveal>
+                    <span class="eyebrow__dot"></span> Get in touch
+                </p>
+                <h1 class="inner-hero__title">
+                    <span class="line" data-reveal-line>Let's talk about</span>
+                    <span class="line" data-reveal-line>your <em>smile.</em></span>
+                </h1>
+                <p class="inner-hero__lead" data-reveal>
+                    Questions about a treatment, insurance, or your very first visit?
+                    Reach us however's easiest — call, message, or stop by the studio.
+                    A real person replies, always.
+                </p>
+
+                <div class="inner-hero__actions" data-reveal style="gap: 1rem;">
+                    <a href="404.html" class="btn btn--sage" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-phone"></i> Call the studio
+                    </a>
+                    <a href="404.html" target="_blank" rel="noopener" class="btn btn--sage" style="background: var(--color-espresso); display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp us
+                    </a>
+                    <a href="404.html" class="btn btn--ghost" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-envelope"></i> Email us
+                    </a>
+                </div>
+
+                <div class="inner-hero__stats" data-reveal>
+                    <div class="inner-hero__stat">
+                        <strong data-counter="1">1</strong>
+                        <span>business day average reply time</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. QUICK CONTACT CARDS ============ -->
+        <section class="cp-quick" id="quick-contact">
+            <div class="cp-quick__inner">
+                <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Choose your way in</p>
+                <h2 class="section-title" data-reveal>Four easy ways to reach the studio.</h2>
+
+                <div class="cp-quick__grid">
+                    <a href="404.html" class="cp-card">
+                        <span class="cp-card__icon"><i class="fas fa-phone"></i></span>
+                        <h3>Call us</h3>
+                        <p>Speak directly with our care coordinator for bookings or questions.</p>
+                        <span class="cp-card__value">+91 98765 43210</span>
+                        <span class="cp-card__meta">Mon–Sat, 8:00–19:00</span>
+                        <span class="cp-card__go" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="404.html" target="_blank" rel="noopener" class="cp-card">
+                        <span class="cp-card__icon"><i class="fab fa-whatsapp"></i></span>
+                        <h3>WhatsApp</h3>
+                        <p>Send a quick message — ideal for photos, forms, or a fast question.</p>
+                        <span class="cp-card__value">+91 98765 43210</span>
+                        <span class="cp-card__meta">Usually replies within the hour</span>
+                        <span class="cp-card__go" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="404.html" class="cp-card">
+                        <span class="cp-card__icon"><i class="fas fa-envelope"></i></span>
+                        <h3>Email</h3>
+                        <p>Best for detailed questions, records, or insurance paperwork.</p>
+                        <span class="cp-card__value">info@thestackly.com</span>
+                        <span class="cp-card__meta">Replies within 1 business day</span>
+                        <span class="cp-card__go" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="404.html" class="cp-card">
+                        <span class="cp-card__icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <h3>Visit in person</h3>
+                        <p>Drop by the studio — free on-site parking, no appointment needed to say hello.</p>
+                        <span class="cp-card__value">Salem, Tamil Nadu</span>
+                        <span class="cp-card__meta">See map &amp; directions below</span>
+                        <span class="cp-card__go" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. VISIT / MAP + DIRECTIONS ============ -->
+        <section class="cp-visit" id="visit">
+            <div class="cp-visit__map" data-reveal>
+                <iframe src="https://www.google.com/maps?q=Salem,Tamil+Nadu,India&output=embed" width="100%"
+                    height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Map to Stackly Dental Studio, Salem"></iframe>
+            </div>
+
+
+        </section>
+
+        <!-- ============ 4. MESSAGE FORM ============ -->
+        <section class="cp-form" id="message">
+            <div class="cp-form__panel">
+                <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Send a message</p>
+                <h2 class="section-title section-title--light">
+                    Tell us what’s on your mind.
+                </h2>
+                <p class="cp-form__sub">
+                    Whether it's a question, a concern, or a first hello, our care
+                    coordinator reads every message personally.
+                </p>
+
+                <ul class="cp-form__facts">
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Response time</strong><span>Within 1 business day, usually sooner</span></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-nurse"></i>
+                        <div><strong>Who replies</strong><span>A real care coordinator, never a bot</span></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-lock"></i>
+                        <div><strong>Privacy</strong><span>Your details are never shared or sold</span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="cp-form__form" id="contactForm" novalidate>
+
+                <div class="cp-form__form-head">
+                    <p class="eyebrow eyebrow--sage"><span class="eyebrow__dot"></span> Drop us a line</p>
+                    <h3 class="cp-form__form-title">We'd love to hear from you.</h3>
+                </div>
+
+                <div class="cp-field">
+                    <input type="text" id="cfName" name="name" required placeholder=" ">
+                    <label for="cfName">Full name</label>
+                </div>
+
+                <div class="cp-form__row">
+                    <div class="cp-field">
+                        <input type="email" id="cfEmail" name="email" required placeholder=" ">
+                        <label for="cfEmail">Email address</label>
+                    </div>
+                    <div class="cp-field">
+                        <input type="tel" id="cfPhone" name="phone" required placeholder=" ">
+                        <label for="cfPhone">Phone number</label>
+                    </div>
+                </div>
+
+                <div class="cp-field">
+                    <span class="cp-field__label">What's this about?</span>
+                    <div class="cp-chipselect" id="cfTopic" role="group" aria-label="Reason for contact">
+                        <button type="button" class="cp-chipselect__btn is-active" data-value="General question">General
+                            question</button>
+                        <button type="button" class="cp-chipselect__btn" data-value="Booking an appointment">Book an
+                            appointment</button>
+                        <button type="button" class="cp-chipselect__btn" data-value="Insurance & billing">Insurance
+                            &amp;
+                            billing</button>
+                        <button type="button" class="cp-chipselect__btn" data-value="Emergency care">Emergency
+                            care</button>
+                    </div>
+                    <input type="hidden" name="topic" id="cfTopicValue" value="General question">
+                </div>
+
+                <div class="cp-field">
+                    <textarea id="cfMessage" name="message" rows="4" required placeholder=" "></textarea>
+                    <label for="cfMessage">Your message</label>
+                </div>
+
+                <button type="submit" class="btn btn--sage btn--block">
+                    <span class="btn__label">Send message</span>
+                    <span class="btn__success">Send message</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- ============ 5. LIVE STUDIO HOURS ============ -->
+        <section class="cp-hours" id="hours">
+            <div class="cp-hours__inner">
+                <div class="cp-hours__head">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow__dot"></span> Right now</p>
+                        <h2 class="section-title">Studio hours, at a glance.</h2>
+                    </div>
+                    <div class="cp-hours__status" id="hoursStatus" data-reveal>
+                        <span class="cp-hours__status-dot"></span>
+                        <span class="cp-hours__status-text">Checking…</span>
+                    </div>
+                </div>
+
+                <ul class="cp-hours__table" id="hoursTable">
+                    <li data-day="1">
+                        <span class="cp-hours__day">Monday</span>
+                        <span class="cp-hours__time">8:00 – 19:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="2">
+                        <span class="cp-hours__day">Tuesday</span>
+                        <span class="cp-hours__time">8:00 – 19:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="3">
+                        <span class="cp-hours__day">Wednesday</span>
+                        <span class="cp-hours__time">8:00 – 19:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="4">
+                        <span class="cp-hours__day">Thursday</span>
+                        <span class="cp-hours__time">8:00 – 19:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="5">
+                        <span class="cp-hours__day">Friday</span>
+                        <span class="cp-hours__time">8:00 – 19:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="6">
+                        <span class="cp-hours__day">Saturday</span>
+                        <span class="cp-hours__time">9:00 – 15:00</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                    <li data-day="0">
+                        <span class="cp-hours__day">Sunday</span>
+                        <span class="cp-hours__time">Emergencies only</span>
+                        <span class="cp-hours__bar"><span class="cp-hours__bar-fill"></span></span>
+                    </li>
+                </ul>
+                <p class="cp-hours__note" id="hoursNote">Times shown in your local time zone.</p>
+            </div>
+        </section>
+
+        <!-- ============ 6. FAQ ============ -->
+        <section class="cp-faq" id="faq">
+            <div class="cp-faq__inner">
+                <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Before you reach out</p>
+                <h2 class="section-title" data-reveal>Answers to what people ask first.</h2>
+
+                <div class="cp-faq__list" id="faqList">
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>Do I need an appointment, or can I walk in?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>Walk-ins are welcome for consultations, but booking ahead means shorter waits and
+                                guarantees you a slot with your preferred dentist. Same-week appointments are almost
+                                always
+                                available.</p>
+                        </div>
+                    </div>
+
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>Which insurance providers do you accept?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>We work with most major providers and can also help you file out-of-network claims.
+                                Email us your policy details ahead of your visit and we'll confirm your coverage before
+                                you
+                                arrive.</p>
+                        </div>
+                    </div>
+
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>What should I bring to my first visit?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>A photo ID, your insurance card if you have one, and a list of any medications you're
+                                currently taking. If you have recent X-rays from another dentist, feel free to bring or
+                                email those too.</p>
+                        </div>
+                    </div>
+
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>What's your cancellation policy?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>We simply ask for 24 hours' notice so we can offer the slot to another patient. Life
+                                happens — just call or WhatsApp us and we'll find a new time that works.</p>
+                        </div>
+                    </div>
+
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>What if I have a dental emergency after hours?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>Call the studio line any time — after-hours calls are forwarded to our on-call dentist
+                                for
+                                urgent issues like severe pain, swelling, or a knocked-out tooth. Sunday hours are
+                                reserved
+                                for emergencies only.</p>
+                        </div>
+                    </div>
+
+                    <div class="cp-faq__item">
+                        <button class="cp-faq__q" aria-expanded="false">
+                            <span>Do you see children and teens?</span>
+                            <span class="cp-faq__toggle"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="cp-faq__a">
+                            <p>Yes — several of our dentists focus on gentle, anxiety-aware care for younger patients.
+                                Let us know your child's age when you book so we can match them with the right dentist.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="index.html" class="nav__logo footer__logo">
+                    <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+                </a>
+                <p>Personalized dental care focused on healthy smiles, modern treatments, and a comfortable patient
+                    experience.
+                </p>
+                <div class="footer__social">
+                    <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer__col">
+                <h4>Care</h4>
+                <a href="404.html">Dental Implants</a>
+                <a href="404.html">Cosmetic Smile Design</a>
+                <a href="404.html">Emergencies</a>
+                <a href="404.html">Digital Scanning</a>
+                <a href="404.html">Clear Aligners</a>
+            </div>
+
+            <div class="footer__col footer__col--contact">
+
+                <h4>Visit</h4>
+                <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;Salem, Tamil Nadu</p>
+                <p><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp; <a href="tel:+919876543210"> 9876543210</a></p>
+                <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp; <a
+                        href="mailto:info@thestackly.com">info@thestackly.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>&copy; <span id="year"></span> Stackly Dental Studio. All rights reserved.</span>
+            <span class="footer__legal"><a href="404.html">Privacy</a> &middot; <a href="404.html">Terms</a></span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

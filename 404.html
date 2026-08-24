@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — Stackly Dental Studio</title>
+  <meta name="description"
+    content="The page you're looking for has wandered off. Find your way back to Stackly Dental Studio.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/404.css">
+</head>
+
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+
+  <main id="top">
+
+    <!-- ============ 404 ============ -->
+    <section class="notfound" id="notfound">
+
+      <div class="notfound__inner">
+
+        <div class="notfound__visual" aria-hidden="true">
+          <svg class="notfound__tooth" viewBox="0 0 160 180" fill="none">
+            <path id="toothPath"
+              d="M80 8c-22 0-34 14-34 34 0 16 6 22 8 42 2 16 6 30 10 44 3 11 8 18 16 18s13-7 16-18c1-5 2-10 2-16 0-6 1-11 2-16 3 5 4 10 4 16 0 6 1 11 2 16 3 11 8 18 16 18s13-7 16-18c4-14 8-28 10-44 2-20 8-26 8-42 0-20-12-34-34-34-6 0-10 2-16 5-6-3-10-5-16-5Z"
+              stroke="var(--color-espresso)" stroke-width="2.2" stroke-linejoin="round" />
+            <circle class="notfound__eye" cx="62" cy="58" r="4.5" fill="var(--color-espresso)" />
+            <circle class="notfound__eye" cx="98" cy="58" r="4.5" fill="var(--color-espresso)" />
+            <path d="M64 78q16 10 32 0" stroke="var(--color-espresso)" stroke-width="2.2" stroke-linecap="round"
+              fill="none" />
+          </svg>
+          <svg class="notfound__arc" viewBox="0 0 400 200" aria-hidden="true">
+            <path id="notfoundArcPath" d="M10,140 C 100,10 300,10 390,140" fill="none" stroke="var(--color-gold)"
+              stroke-width="2" stroke-linecap="round" stroke-dasharray="4 10" />
+          </svg>
+          <span class="notfound__spark notfound__spark--a">+</span>
+          <span class="notfound__spark notfound__spark--b">+</span>
+          <span class="notfound__spark notfound__spark--c">+</span>
+        </div>
+
+        <p class="eyebrow notfound__eyebrow" data-reveal>
+          <span class="eyebrow__dot"></span> Page not found
+        </p>
+
+        <div class="notfound__code" aria-hidden="true" data-reveal>
+          <span class="notfound__digit" data-digit="4">4</span>
+          <span class="notfound__digit notfound__digit--mid" data-digit="0">0</span>
+          <span class="notfound__digit" data-digit="4">4</span>
+        </div>
+
+        <h1 class="notfound__title">
+          <span class="line" data-reveal-line>This page took an</span>
+          <span class="line" data-reveal-line>unscheduled <em>day off.</em></span>
+        </h1>
+
+        <p class="notfound__sub" data-reveal>
+          This page is gone, but your smile isn’t. Let’s get you back.
+        </p>
+
+        <div class="notfound__ctas" data-reveal>
+          <a href="index.html" class="btn btn--sage">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 21V12h6v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Back to homepage
+          </a>
+          <button class="btn btn--ghost" id="goBackBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Go back
+          </button>
+        </div>
+
+       
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="assets/js/404.js"></script>
+  <script>
+    // Go back button
+    document.getElementById("goBackBtn").addEventListener("click", () => {
+      sessionStorage.removeItem("fromBooking");
+      if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = "index.html";
+      }
+    });
+
+    // If we landed here from the booking form, show a confirmation message
+    if (sessionStorage.getItem("fromBooking")) {
+      sessionStorage.removeItem("fromBooking");
+      const sub = document.querySelector(".notfound__sub");
+      if (sub) {
+        sub.textContent = "Your appointment request was received. We'll be in touch within one business day.";
+      }
+    }
+  </script>
+</body>
+
+</html>

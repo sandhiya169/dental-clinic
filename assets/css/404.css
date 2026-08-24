@@ -1,0 +1,347 @@
+/* ==========================================================================
+   Stackly DENTAL STUDIO — 404 (page not found)
+   All animations use pure CSS @keyframes — no GSAP dependency.
+   Elements are ALWAYS visible; animation is progressive enhancement only.
+   ========================================================================== */
+
+/* Override style.css scroll-reveal defaults — the 404 page has no scroll JS */
+[data-reveal],
+[data-reveal-line] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ---------------- Keyframes ---------------- */
+@keyframes nf-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nf-drop-in {
+  from { opacity: 0; transform: translateY(-24px) rotate(-6deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes nf-pop {
+  0%   { opacity: 0; transform: scale(0.6); }
+  70%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes nf-slide-up {
+  from { opacity: 0; transform: translateY(100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nf-float {
+  0%, 100% { transform: translateY(0)   rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes nf-drift {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes nf-arc {
+  from { stroke-dashoffset: 700; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes nf-digit {
+  from { opacity: 0; transform: translateY(40px) scale(.85); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+/* ---------------- Page layout ---------------- */
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem var(--gutter) 5rem;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 10%, rgba(87, 112, 93, .13), transparent 55%),
+    radial-gradient(ellipse 50% 45% at 90% 20%, rgba(176, 138, 78, .12), transparent 55%),
+    radial-gradient(ellipse 40% 35% at 50% 90%, rgba(232, 180, 160, .09), transparent 60%),
+    var(--color-porcelain);
+  overflow: hidden;
+}
+
+.notfound__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  width: 100%;
+}
+
+/* ---------------- Illustration ---------------- */
+.notfound__visual {
+  position: relative;
+  width: min(180px, 48vw);
+  margin: 0 auto 1.4rem;
+}
+
+.notfound__tooth {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 20px 32px rgba(34, 31, 27, .16));
+  transform-origin: center bottom;
+  animation: nf-drop-in .8s cubic-bezier(.22,1,.36,1) both,
+             nf-float 3s ease-in-out 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notfound__tooth { animation: nf-drop-in .8s cubic-bezier(.22,1,.36,1) both; }
+}
+
+.notfound__tooth path#toothPath {
+  fill: var(--color-white);
+}
+
+.notfound__arc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260%;
+  height: 260%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: .7;
+}
+
+#notfoundArcPath {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: nf-arc 2s ease-in-out .4s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #notfoundArcPath { stroke-dashoffset: 0; animation: none; }
+}
+
+.notfound__spark {
+  position: absolute;
+  font-family: var(--font-mono);
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  animation: nf-pop .5s cubic-bezier(.22,1,.36,1) .6s both;
+}
+
+.notfound__spark--a { top: 6%;  right: 4%;  }
+.notfound__spark--b { bottom: 18%; left: -2%; font-size: .8rem; animation-delay: .75s; }
+.notfound__spark--c { top: 42%; right: -6%; font-size: .7rem;  animation-delay: .9s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .notfound__spark { animation: none; opacity: .8; }
+}
+
+/* ---------------- Eyebrow ---------------- */
+.notfound__eyebrow {
+  justify-content: center;
+  animation: nf-fade-up .6s cubic-bezier(.22,1,.36,1) .3s both;
+}
+
+/* ---------------- Giant 404 number ---------------- */
+.notfound__code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .04em;
+  margin: .2rem auto 1rem;
+  line-height: 1;
+}
+
+.notfound__digit {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(5.5rem, 20vw, 11rem);
+  letter-spacing: -0.04em;
+  line-height: .88;
+  color: var(--color-gold);
+  animation: nf-digit .7s cubic-bezier(.22,1,.36,1) both;
+}
+
+.notfound__digit:nth-child(1) { animation-delay: .35s; }
+.notfound__digit:nth-child(2) { animation-delay: .48s; }
+.notfound__digit:nth-child(3) { animation-delay: .61s; }
+
+.notfound__digit--mid {
+  color: var(--color-sage);
+  -webkit-text-stroke: 0 transparent;
+  position: relative;
+}
+
+/* Dashed ring inside the "0" */
+.notfound__digit--mid::after {
+  content: '';
+  position: absolute;
+  inset: 20% 24%;
+  border-radius: 50%;
+  border: 2px dashed rgba(87, 112, 93, .35);
+  pointer-events: none;
+}
+
+/* Hover colour shift on the outer 4s */
+.notfound__code:hover .notfound__digit:not(.notfound__digit--mid) {
+  color: var(--color-gold);
+  -webkit-text-stroke: 2.5px var(--color-gold);
+  transition: color .3s ease, -webkit-text-stroke-color .3s ease;
+}
+
+/* ---------------- Title ---------------- */
+.notfound__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw + .5rem, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.2rem;
+}
+
+.notfound__title .line {
+  display: block;
+  overflow: hidden;
+}
+
+.notfound__title .line:nth-child(1) span,
+.notfound__title .line:nth-child(1) {
+  animation: nf-slide-up .8s cubic-bezier(.22,1,.36,1) .7s both;
+}
+
+.notfound__title .line:nth-child(2) {
+  animation: nf-slide-up .8s cubic-bezier(.22,1,.36,1) .84s both;
+}
+
+.notfound__title em {
+  font-style: italic;
+  color: var(--color-sage);
+  font-weight: 400;
+}
+
+/* ---------------- Subtext ---------------- */
+.notfound__sub {
+  font-size: var(--fs-lead);
+  color: var(--color-espresso-soft);
+  max-width: 48ch;
+  margin: 0 auto 2.2rem;
+  animation: nf-fade-up .7s cubic-bezier(.22,1,.36,1) 1s both;
+}
+
+/* ---------------- CTAs ---------------- */
+.notfound__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+  animation: nf-fade-up .7s cubic-bezier(.22,1,.36,1) 1.15s both;
+}
+
+.notfound__ctas .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  cursor: pointer;
+}
+
+.notfound__ctas .btn svg {
+  flex-shrink: 0;
+  transition: transform .25s ease;
+}
+
+.notfound__ctas .btn--sage:hover svg  { transform: translateX(3px); }
+.notfound__ctas .btn--ghost:hover svg { transform: translateX(-3px); }
+
+/* ---------------- Quick links ---------------- */
+.notfound__links {
+  border-top: 1px solid var(--color-porcelain-line);
+  padding-top: 1.8rem;
+  animation: nf-fade-up .7s cubic-bezier(.22,1,.36,1) 1.28s both;
+}
+
+.notfound__links-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--color-espresso-soft);
+  opacity: .7;
+  margin-bottom: 1rem;
+}
+
+.notfound__links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem .9rem;
+}
+
+.notfound__links-grid a {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-sage-deep);
+  padding: .45rem .95rem;
+  border-radius: 100px;
+  border: 1.5px solid var(--color-porcelain-line);
+  transition: border-color .25s ease, background .25s ease, transform .25s ease;
+}
+
+.notfound__links-grid a:hover {
+  border-color: var(--color-sage);
+  background: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 992px) {
+  .notfound__visual { width: min(160px, 44vw); }
+}
+
+@media (max-width: 768px) {
+  .notfound { padding: 5.5rem var(--gutter) 4rem; }
+
+  .notfound__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notfound__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound { padding: 5rem var(--gutter) 3rem; }
+
+  .notfound__visual {
+    width: min(140px, 42vw);
+    margin-bottom: 1rem;
+  }
+
+  .notfound__digit {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .notfound__title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .notfound__sub { font-size: .95rem; }
+
+  .notfound__links-grid a {
+    padding: .4rem .8rem;
+    font-size: .82rem;
+  }
+}

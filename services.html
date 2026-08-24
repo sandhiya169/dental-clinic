@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Stackly Dental Studio | Preventive, Cosmetic &amp; Restorative Care</title>
+    <meta name="description"
+        content="Explore Stackly Dental Studio's full range of services — preventive hygiene, cosmetic smile design, implants, aligners, restorative care, sedation and same-day emergencies — with transparent pricing.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/inner-hero.css">
+</head>
+
+<body>
+
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader-logo">
+        <svg class="preloader-arc" viewBox="0 0 200 100" aria-hidden="true">
+            <path id="preloaderPath" d="M10,40 Q100,110 190,40" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav is-scrolled" id="siteNav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+            </a>
+
+            <nav class="nav__links" id="navLinks">
+                <a href="index.html" data-nav>Home</a>
+                <a href="about.html" data-nav>About</a>
+                <a href="services.html" data-nav>Services</a>
+                <a href="blog.html" data-nav>Blog</a>
+                <a href="contact.html" data-nav>Contact</a>
+            </nav>
+
+            <div class="nav__actions">
+                <a href="login.html" class="btn btn--sage btn--sm nav__cta">Login</a>
+                <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav__mobile" id="navMobile">
+            <a href="index.html" data-nav>Home</a>
+            <a href="about.html" data-nav>About</a>
+            <a href="services.html" data-nav>Services</a>
+            <a href="blog.html" data-nav>Blog</a>
+            <a href="contact.html" data-nav>Contact</a>
+            <a href="login.html" class="btn btn--sage btn--sm">Login</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ============ 1. SERVICES HERO ============ -->
+        <section class="inner-hero" id="hero">
+            <div class="inner-hero__bg" aria-hidden="true" style="background-image: url('assets/images/treatment.webp');"></div>
+            <div class="inner-hero__inner">
+                <p class="eyebrow" data-hero-el><span class="eyebrow__dot"></span> Our services</p>
+                <h1 class="inner-hero__title">
+                    <span class="line" data-hero-line>Care built around</span>
+                    <span class="line" data-hero-line>every stage of your <em>smile.</em></span>
+                </h1>
+                <p class="inner-hero__lead" data-hero-el>
+                    From routine cleanings to full smile makeovers, every service at Stackly
+                    is explained plainly, priced transparently, and paced to you — never
+                    the clock.
+                </p>
+
+                <div class="inner-hero__actions" data-hero-el>
+                    <a href="404.html" class="btn btn--sage">Browse services</a>
+                    <a href="404.html" class="btn btn--ghost">
+                        Book a visit
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="inner-hero__stats" data-hero-el>
+                    <div class="inner-hero__stat">
+                        <strong data-counter="7">0</strong>
+                        <span>core service lines</span>
+                    </div>
+                    <div class="inner-hero__stat-divider" aria-hidden="true"></div>
+                    <div class="inner-hero__stat">
+                        <strong data-counter="98" data-suffix="%">0</strong>
+                        <span>insurance-friendly</span>
+                    </div>
+                    <div class="inner-hero__stat-divider" aria-hidden="true"></div>
+                    <div class="inner-hero__stat">
+                        <strong>Same</strong>
+                        <span>week availability</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. FILTERABLE SERVICE GRID ============ -->
+        <section class="svc-grid" id="services-grid">
+            <div class="svc-grid__head">
+                <p class="eyebrow" data-aos="fade-up"><span class="eyebrow__dot"></span> Find the right care</p>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Seven ways we <em>look after</em>
+                    your smile.</h2>
+                <p class="svc-grid__sub" data-aos="fade-up" data-aos-delay="120">Filter by what you need — every
+                    card links straight to booking.</p>
+            </div>
+
+            <div class="svc-tabs" id="svcTabs" role="tablist" aria-label="Filter services by category"
+                data-aos="fade-up">
+                <button class="svc-tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="svc-tab" data-filter="preventive" role="tab" aria-selected="false">Preventive</button>
+                <button class="svc-tab" data-filter="cosmetic" role="tab" aria-selected="false">Cosmetic</button>
+                <button class="svc-tab" data-filter="restorative" role="tab" aria-selected="false">Restorative</button>
+                <button class="svc-tab" data-filter="surgical" role="tab" aria-selected="false">Surgical</button>
+                <button class="svc-tab" data-filter="emergency" role="tab" aria-selected="false">Emergency</button>
+                <button class="svc-tab" data-filter="comfort" role="tab" aria-selected="false">Comfort</button>
+            </div>
+
+            <div class="svc-cards" id="svcCards">
+
+                <article class="svc-card" data-category="preventive">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path
+                                d="M16 4c-6 0-10 4-10 9 0 4 2 5 2 9 0 2 1.5 3 3 3s2-1 2-3v-2c0-1 1-1 1 0v2c0 2 1 3 2 3s2-1 2-3c0-4 2-5 2-9 0-5-4-9-10-9Z"
+                                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Preventive</span>
+                    <h3>Preventive &amp; Hygiene Care</h3>
+                    <p>Routine exams, cleanings, and early detection to keep small issues
+                        from becoming big ones.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $89</span>
+                        <a href="404.html" class="svc-card__link">Book a cleaning →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="cosmetic">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M6 14c4 6 16 6 20 0" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                            <circle cx="10" cy="10" r="1.4" fill="currentColor" />
+                            <circle cx="22" cy="10" r="1.4" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Cosmetic</span>
+                    <h3>Cosmetic Smile Design</h3>
+                    <p>Whitening, veneers, and bonding planned around your face, not a
+                        template.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $340</span>
+                        <a href="404.html" class="svc-card__link">Design my smile →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="surgical">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M16 4v10m0 0-4 14h8l-4-14Z" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Surgical</span>
+                    <h3>Dental Implants</h3>
+                    <p>Single-tooth to full-arch replacement, guided by 3D imaging for a
+                        natural result.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $1,890</span>
+                        <a href="404.html" class="svc-card__link">Ask about implants →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="cosmetic">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <rect x="8" y="6" width="16" height="20" rx="3" fill="none" stroke="currentColor"
+                                stroke-width="1.6" />
+                            <path d="M12 12h8M12 16h8M12 20h5" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Cosmetic</span>
+                    <h3>Clear Aligners</h3>
+                    <p>Straighten teeth with a digital plan you can preview before the
+                        first tray ever ships.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $3,200</span>
+                        <a href="404.html" class="svc-card__link">Start my plan →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="restorative">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M8 20c0-8 4-12 8-12s8 4 8 12" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                            <path d="M6 20h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Restorative</span>
+                    <h3>Restorative &amp; Root Canal</h3>
+                    <p>Same-tooth-day fillings, crowns, and root canal therapy — handled
+                        gently, with sedation available.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $210</span>
+                        <a href="404.html" class="svc-card__link">Get relief →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="emergency">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M16 6v10l7 4" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.6" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Emergency</span>
+                    <h3>Same-Day Emergencies</h3>
+                    <p>Sudden pain or a chipped tooth doesn't wait — reserved same-day
+                        slots, every weekday.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $150</span>
+                        <a href="404.html" class="svc-card__link">Get seen today →</a>
+                    </div>
+                </article>
+
+                <article class="svc-card" data-category="comfort">
+                    <span class="svc-card__icon">
+                        <svg viewBox="0 0 32 32">
+                            <path
+                                d="M22.8 12.6c0 6-6.8 10.9-6.8 10.9S9.2 18.6 9.2 12.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 4.8 1.8Z"
+                                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="svc-card__tag">Comfort</span>
+                    <h3>Sedation &amp; Comfort Dentistry</h3>
+                    <p>Nitrous, oral, or IV sedation options for anxious patients and
+                        longer procedures — matched to your comfort level.</p>
+                    <div class="svc-card__foot">
+                        <span class="svc-card__price">From $60</span>
+                        <a href="404.html" class="svc-card__link">Ask about sedation →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="svc-cards__empty" id="svcEmpty" hidden>No services in this category yet — try
+                "All" or give us a call.</p>
+        </section>
+
+        <!-- ============ 3. SPOTLIGHT SCROLLYTELLING ============ -->
+        <section class="spotlight" id="spotlight">
+            <div class="spotlight__head">
+                <p class="eyebrow" data-aos="fade-up"><span class="eyebrow__dot"></span> A closer look</p>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Three services people <em>ask
+                        about most.</em></h2>
+            </div>
+
+            <div class="spotlight__layout">
+                <div class="spotlight__sticky">
+                    <div class="spotlight__frame">
+                        <img data-spotlight-img="0"
+                            src="assets/images/image-7.webp"
+                            alt="Bright treatment room used for cosmetic smile design consultations" class="is-active">
+                        <img data-spotlight-img="1"
+                            src="assets/images/dental-imapcts.webp"
+                            alt="Dental implant model illustrating tooth structure">
+                        <img data-spotlight-img="2"
+                            src="assets/images/image-10.webp"
+                            alt="Dentist examining a patient using a digital dental scanner">
+                    </div>
+                </div>
+
+                <div class="spotlight__steps" id="spotlightSteps">
+                    <div class="spotlight__step is-active" data-spotlight-step="0">
+                        <span class="spotlight__num">01</span>
+                        <h3>Cosmetic Smile Design</h3>
+                        <p>We map whitening, veneers, and bonding against your natural
+                            facial proportions using digital smile design software, so you
+                            preview the result before we touch a single tooth.</p>
+                        <ul class="spotlight__list">
+                            <li>Digital smile preview</li>
+                            <li>Porcelain &amp; composite veneers</li>
+                            <li>In-studio &amp; take-home whitening</li>
+                        </ul>
+                    </div>
+                    <div class="spotlight__step" data-spotlight-step="1">
+                        <span class="spotlight__num">02</span>
+                        <h3>Dental Implants</h3>
+                        <p>Guided implant surgery replaces missing teeth with results
+                            that look, feel, and function like the real thing — planned
+                            entirely from a single 3D scan.</p>
+                        <ul class="spotlight__list">
+                            <li>3D-guided placement</li>
+                            <li>Single-tooth to full-arch</li>
+                            <li>In-house crown fabrication</li>
+                        </ul>
+                    </div>
+                    <div class="spotlight__step" data-spotlight-step="2">
+                        <span class="spotlight__num">03</span>
+                        <h3>Digital Scanning &amp; Diagnostics</h3>
+                        <p>Every treatment plan at Stackly starts with a fast, radiation-light
+                            intraoral scan — no more messy impression trays, no guesswork.</p>
+                        <ul class="spotlight__list">
+                            <li>80% less radiation than film</li>
+                            <li>Instant 3D bite model</li>
+                            <li>Shareable with your insurer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. PRICING TIERS ============ -->
+        <section class="pricing" id="pricing">
+            <div class="pricing__head">
+                <p class="eyebrow" data-aos="fade-up"><span class="eyebrow__dot"></span> Transparent pricing</p>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Know the number <em>before</em> you
+                    sit down.</h2>
+            </div>
+
+            <div class="pricing__grid">
+                <div class="pricing__card" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Essential Care</h3>
+                    <p class="pricing__desc">A thorough checkup and clean — the baseline
+                        every healthy smile needs twice a year.</p>
+                    <div class="pricing__price"><span>$89</span>/ visit</div>
+                    <ul class="pricing__features">
+                        <li>Exam &amp; digital X-ray</li>
+                        <li>Standard cleaning</li>
+                        <li>Fluoride treatment</li>
+                        <li>Personalized hygiene plan</li>
+                    </ul>
+                    <a href="404.html" class="btn btn--ghost pricing__cta">Book essentials</a>
+                </div>
+
+                <div class="pricing__card pricing__card--featured" data-aos="fade-up" data-aos-delay="100">
+                    <span class="pricing__badge">Most booked</span>
+                    <h3>Comprehensive Care</h3>
+                    <p class="pricing__desc">For anyone starting a new treatment plan or
+                        due for a full diagnostic review.</p>
+                    <div class="pricing__price"><span>$149</span>/ visit</div>
+                    <ul class="pricing__features">
+                        <li>Everything in Essential Care</li>
+                        <li>Oral cancer screening</li>
+                        <li>Intraoral 3D scan</li>
+                        <li>Written treatment consultation</li>
+                        <li>Priority scheduling</li>
+                    </ul>
+                    <a href="404.html" class="btn btn--sage pricing__cta">Book comprehensive</a>
+                </div>
+
+                <div class="pricing__card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Complete Smile Makeover</h3>
+                    <p class="pricing__desc">A fully custom plan for cosmetic, restorative,
+                        or implant work spanning multiple visits.</p>
+                    <div class="pricing__price"><span>Custom</span>quote</div>
+                    <ul class="pricing__features">
+                        <li>Digital smile design session</li>
+                        <li>3D treatment simulation</li>
+                        <li>Staged payment plan</li>
+                        <li>Dedicated care coordinator</li>
+                    </ul>
+                    <a href="404.html" class="btn btn--ghost pricing__cta">Request a quote</a>
+                </div>
+            </div>
+            <p class="pricing__note" data-aos="fade-up">Prices shown are typical starting points; your exact cost
+                depends on diagnosis and insurance coverage.</p>
+        </section>
+
+        <!-- ============ 5. INSURANCE & FINANCING TRUST STRIP ============ -->
+        <section class="trust" id="trust">
+            <div class="trust__marquee" aria-hidden="true">
+                <div class="trust__track">
+                    <span>Most PPO Plans Accepted</span><span>&middot;</span>
+                    <span>CareCredit Financing</span><span>&middot;</span>
+                    <span>HSA / FSA Eligible</span><span>&middot;</span>
+                    <span>Sliding-Scale Options</span><span>&middot;</span>
+                    <span>No-Interest Payment Plans</span><span>&middot;</span>
+                    <span>Most PPO Plans Accepted</span><span>&middot;</span>
+                    <span>CareCredit Financing</span><span>&middot;</span>
+                    <span>HSA / FSA Eligible</span><span>&middot;</span>
+                    <span>Sliding-Scale Options</span><span>&middot;</span>
+                    <span>No-Interest Payment Plans</span><span>&middot;</span>
+                </div>
+            </div>
+
+            <div class="trust__grid">
+                <div class="trust__item" data-aos="zoom-in" data-aos-delay="0">
+                    <span class="trust__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3Z" fill="none" stroke="currentColor"
+                                stroke-width="1.6" stroke-linejoin="round" />
+                            <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h3>Insurance-friendly</h3>
+                    <p>We bill most PPO plans directly and help you understand your
+                        coverage before treatment starts.</p>
+                </div>
+                <div class="trust__item" data-aos="zoom-in" data-aos-delay="80">
+                    <span class="trust__icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="6" width="18" height="13" rx="2.4" fill="none" stroke="currentColor"
+                                stroke-width="1.6" />
+                            <path d="M3 10h18" stroke="currentColor" stroke-width="1.6" />
+                        </svg>
+                    </span>
+                    <h3>Flexible financing</h3>
+                    <p>CareCredit and in-house payment plans mean treatment doesn't
+                        have to wait on a paycheck.</p>
+                </div>
+                <div class="trust__item" data-aos="zoom-in" data-aos-delay="160">
+                    <span class="trust__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19V9l8-5 8 5v10" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linejoin="round" />
+                            <path d="M9 19v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h3>Transparent pricing</h3>
+                    <p>Every quote is written down before work begins — no vague
+                        estimates, no checkout surprises.</p>
+                </div>
+                <div class="trust__item" data-aos="zoom-in" data-aos-delay="240">
+                    <span class="trust__icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+                            <path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h3>No surprise billing</h3>
+                    <p>Pre-treatment estimates are confirmed with your insurer, so the
+                        invoice matches what you agreed to.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. FAQ ACCORDION ============ -->
+        <section class="svc-faq" id="faq">
+            <div class="svc-faq__head">
+                <p class="eyebrow" data-aos="fade-up"><span class="eyebrow__dot"></span> Common questions</p>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Answers, before you <em>ask
+                        twice.</em></h2>
+            </div>
+
+            <div class="svc-faq__list" id="faqList" data-aos="fade-up" data-aos-delay="120">
+                <div class="svc-faq__item is-open">
+                    <button class="svc-faq__q" aria-expanded="true">
+                        <span>Do you accept my dental insurance?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>We're in-network with most major PPO plans and happy to submit
+                            claims directly on your behalf. Send us your insurance details
+                            before your visit and we'll confirm your coverage in advance.</p>
+                    </div>
+                </div>
+
+                <div class="svc-faq__item">
+                    <button class="svc-faq__q" aria-expanded="false">
+                        <span>What if I don't have insurance?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>No problem — we offer sliding-scale pricing for preventive care
+                            and flexible, no-interest financing through CareCredit for
+                            larger treatment plans.</p>
+                    </div>
+                </div>
+
+                <div class="svc-faq__item">
+                    <button class="svc-faq__q" aria-expanded="false">
+                        <span>How soon can I get an appointment?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>Most new patients are seen within a week, and we hold same-day
+                            slots every weekday for emergencies like pain or a chipped
+                            tooth.</p>
+                    </div>
+                </div>
+
+                <div class="svc-faq__item">
+                    <button class="svc-faq__q" aria-expanded="false">
+                        <span>Do you offer sedation for anxious patients?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>Yes — nitrous oxide, oral sedation, and IV sedation are all
+                            available and matched to the procedure and your comfort level,
+                            not just offered as an upsell.</p>
+                    </div>
+                </div>
+
+                <div class="svc-faq__item">
+                    <button class="svc-faq__q" aria-expanded="false">
+                        <span>What's included in a "custom quote"?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>A digital smile design session, a 3D simulation of the proposed
+                            result, and a written, staged cost breakdown — so you know
+                            exactly what each phase costs before agreeing to anything.</p>
+                    </div>
+                </div>
+
+                <div class="svc-faq__item">
+                    <button class="svc-faq__q" aria-expanded="false">
+                        <span>Can I combine services after my consultation?</span>
+                        <span class="svc-faq__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="svc-faq__a">
+                        <p>Absolutely. Most treatment plans evolve after the first scan —
+                            your coordinator will update your written plan and pricing any
+                            time your needs change.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 7. CLOSING CTA ============ -->
+        <section class="svc-cta" id="visit">
+           
+            <div class="svc-cta__inner">
+                <p class="eyebrow eyebrow--light" data-aos="fade-up" style="color: var(--color-sage-deep);"><span class="eyebrow__dot"></span> Ready when
+                    you are</p>
+                <h2 class="section-title section-title--light" data-aos="fade-up" data-aos-delay="80">Pick a
+                    service. <em>We'll handle the rest.</em>
+                </h2>
+                <div class="svc-cta__actions" data-aos="fade-up" data-aos-delay="160">
+                    <a href="404.html" class="btn btn--sage">Book a visit</a>
+                    <a href="404.html" class="btn btn--ghost"
+                        style="border-color: rgba(241,234,217,.3); color: var(--color-cream);">Call: 9876543210</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="index.html" class="nav__logo footer__logo">
+                    <img src="assets/images/stackly-logo.webp" alt="Stackly" class="nav__logo-img">
+                </a>
+                <p>Personalized dental care focused on healthy smiles, modern treatments, and a comfortable patient
+                    experience.</p>
+                <div class="footer__social">
+                    <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer__col">
+                <h4>Care</h4>
+                <a href="404.html">Dental Implants</a>
+                <a href="404.html">Cosmetic Smile Design</a>
+                <a href="404.html">Emergencies</a>
+                <a href="404.html">Digital Scanning</a>
+                <a href="404.html">Clear Aligners</a>
+            </div>
+
+            <div class="footer__col footer__col--contact">
+
+                <h4>Visit</h4>
+                <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;Salem, Tamil Nadu</p>
+                <p><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp; <a href="404.html">9876543210</a></p>
+                <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp; <a href="404.html">info@thestackly.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© <span id="year"></span> Stackly Dental Studio. All rights reserved.</span>
+            <span class="footer__legal"><a href="404.html">Privacy</a> · <a href="404.html">Terms</a></span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/services.js"></script>
+</body>
+
+</html>
