@@ -1740,9 +1740,10 @@ textarea:focus-visible {
    Testimonials
    ========================================================================== */
 .testimonials {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 6rem var(--gutter) 8rem;
+  margin: 50px auto;
+  padding: 8rem var(--gutter);
+  background: var(--color-espresso);
+  color: var(--color-cream);
 }
 
 .testimonials__head {
@@ -1762,10 +1763,12 @@ textarea:focus-visible {
 
 .t-card {
   flex: 0 0 calc(33.333% - 1rem);
-  background: var(--color-white);
-  border: 1px solid var(--color-porcelain-line);
-  border-radius: var(--radius-md);
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -1780,9 +1783,9 @@ textarea:focus-visible {
 
 .t-card p {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--color-espresso);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-cream);
   flex: 1;
 }
 
@@ -1805,8 +1808,8 @@ textarea:focus-visible {
 }
 
 .t-card__person span {
-  font-size: .78rem;
-  color: var(--color-espresso-soft);
+  font-size: .85rem;
+  color: rgba(241, 234, 217, 0.6);
 }
 
 .testimonials__nav {
@@ -1816,28 +1819,31 @@ textarea:focus-visible {
 }
 
 .testimonials__nav button {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  border: 1.5px solid var(--color-porcelain-line);
+  border: 1px solid rgba(241, 234, 217, 0.2);
+  color: var(--color-cream);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .testimonials__nav button:hover {
-  background: var(--color-sage);
-  color: var(--color-white);
-  border-color: var(--color-sage);
+  background: var(--color-cream);
+  color: var(--color-espresso);
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
    Booking CTA
    ========================================================================== */
 .book {
-  background: var(--color-espresso);
-  color: var(--color-cream);
+  background: var(--color-porcelain);
+  color: var(--color-espresso);
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 0;
@@ -1851,7 +1857,7 @@ textarea:focus-visible {
 }
 
 .book__sub {
-  color: rgba(241, 234, 217, .7);
+  color: var(--color-espresso-soft);
   max-width: 40ch;
   margin: 1.2rem 0 2.4rem;
   font-size: var(--fs-lead);
@@ -1868,12 +1874,12 @@ textarea:focus-visible {
   display: flex;
   justify-content: space-between;
   padding-bottom: .8rem;
-  border-bottom: 1px solid rgba(241, 234, 217, .15);
+  border-bottom: 1px solid var(--color-porcelain-line);
   font-size: .9rem;
 }
 
 .book__hours li span:first-child {
-  color: rgba(241, 234, 217, .55);
+  color: var(--color-espresso-soft);
   font-family: var(--font-mono);
   font-size: .8rem;
 }
