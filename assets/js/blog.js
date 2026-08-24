@@ -238,6 +238,7 @@ function initInteractions() {
           const visible = document.querySelectorAll(".article-card:not(.is-hidden)");
           gsap.fromTo(visible, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .4, stagger: .05, ease: "power2.out" });
           toggleEmptyState();
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
         }
       });
     } else {
@@ -246,6 +247,7 @@ function initInteractions() {
         card.classList.toggle("is-hidden", !match);
       });
       toggleEmptyState();
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
     }
   }
 

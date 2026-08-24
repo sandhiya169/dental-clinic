@@ -225,6 +225,9 @@ function initInteractions() {
 
       if (emptyMsg) emptyMsg.hidden = visibleCount !== 0;
 
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+      if (window.AOS) AOS.refresh();
+
       // Re-run entrance animation for newly visible cards
       if (window.gsap) {
         const visibleCards = Array.from(cards).filter((c) => !c.classList.contains("is-hidden"));
