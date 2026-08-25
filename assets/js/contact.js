@@ -10,6 +10,31 @@
 document.addEventListener("DOMContentLoaded", () => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    /* ---------------- Click-to-load Google Map ---------------- */
+    const loadMapBtn = document.getElementById("loadMapBtn");
+    if (loadMapBtn) {
+        loadMapBtn.addEventListener("click", () => {
+            const mapContainer = loadMapBtn.closest(".cp-visit__map");
+            const preview = document.getElementById("mapPreview");
+            const src = loadMapBtn.dataset.src;
+            if (!mapContainer || !src) return;
+
+            const iframe = document.createElement("iframe");
+            iframe.src = src;
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.style.border = "0";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("loading", "eager");
+            iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+            iframe.setAttribute("title", "Map to Stackly Dental Studio, Salem, Tamil Nadu");
+
+            mapContainer.appendChild(iframe);
+            if (preview) preview.remove();
+        });
+    }
+
+
     /* ---------------- Hero arc + visit route draw-in ---------------- */
     if (window.gsap) {
         if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
